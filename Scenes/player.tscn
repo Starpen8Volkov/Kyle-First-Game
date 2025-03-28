@@ -1,0 +1,61 @@
+[gd_scene load_steps=5 format=3 uid="uid://bjv117g4u3uxn"]
+
+[ext_resource type="Script" uid="uid://dqbsw8ylxksoi" path="res://Scripts/player_grid_movement.gd" id="1_gfkw8"]
+[ext_resource type="SpriteFrames" uid="uid://c4ukbjfnk438o" path="res://Assets/Spriteframes/player_frames.tres" id="2_jkj8r"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_am3h0"]
+size = Vector2(160, 160)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8mqnw"]
+size = Vector2(160, 160)
+
+[node name="Player" type="CharacterBody2D" groups=["player"]]
+scale = Vector2(0.1, 0.1)
+motion_mode = 1
+script = ExtResource("1_gfkw8")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-1.19209e-06, 1.16229e-05)
+scale = Vector2(0.999999, 0.999999)
+shape = SubResource("RectangleShape2D_am3h0")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." groups=["player_sprite"]]
+scale = Vector2(2, 2)
+sprite_frames = ExtResource("2_jkj8r")
+animation = &"left"
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.2
+autostart = true
+
+[node name="Node2D" type="Node2D" parent="."]
+
+[node name="Area2D" type="Area2D" parent="Node2D"]
+
+[node name="Left Collision" type="CollisionShape2D" parent="Node2D/Area2D"]
+position = Vector2(-160, 0)
+scale = Vector2(1, 1)
+shape = SubResource("RectangleShape2D_8mqnw")
+
+[node name="Area2D2" type="Area2D" parent="Node2D"]
+
+[node name="Right Collision" type="CollisionShape2D" parent="Node2D/Area2D2"]
+position = Vector2(160, 0)
+scale = Vector2(1, 1)
+shape = SubResource("RectangleShape2D_8mqnw")
+
+[node name="Area2D3" type="Area2D" parent="Node2D"]
+
+[node name="Up Collision" type="CollisionShape2D" parent="Node2D/Area2D3"]
+position = Vector2(0, -160)
+scale = Vector2(1, 1)
+shape = SubResource("RectangleShape2D_8mqnw")
+
+[node name="Area2D4" type="Area2D" parent="Node2D"]
+
+[node name="Down Collision" type="CollisionShape2D" parent="Node2D/Area2D4"]
+position = Vector2(0, 160)
+scale = Vector2(1, 1)
+shape = SubResource("RectangleShape2D_8mqnw")
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
