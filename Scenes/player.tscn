@@ -28,34 +28,34 @@ animation = &"left"
 wait_time = 0.2
 autostart = true
 
-[node name="Node2D" type="Node2D" parent="."]
+[node name="Collision Detection" type="Node2D" parent="."]
 
-[node name="Area2D" type="Area2D" parent="Node2D"]
+[node name="Left" type="Area2D" parent="Collision Detection"]
 
-[node name="Left Collision" type="CollisionShape2D" parent="Node2D/Area2D"]
+[node name="Left Collision" type="CollisionShape2D" parent="Collision Detection/Left"]
 position = Vector2(-160, 0)
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_8mqnw")
 
-[node name="Area2D2" type="Area2D" parent="Node2D"]
+[node name="Right" type="Area2D" parent="Collision Detection"]
 
-[node name="Right Collision" type="CollisionShape2D" parent="Node2D/Area2D2"]
+[node name="Right Collision" type="CollisionShape2D" parent="Collision Detection/Right"]
 position = Vector2(160, 0)
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_8mqnw")
 
-[node name="Area2D3" type="Area2D" parent="Node2D"]
+[node name="Top" type="Area2D" parent="Collision Detection"]
 
-[node name="Up Collision" type="CollisionShape2D" parent="Node2D/Area2D3"]
+[node name="Up Collision" type="CollisionShape2D" parent="Collision Detection/Top"]
 position = Vector2(0, -160)
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_8mqnw")
 
-[node name="Area2D4" type="Area2D" parent="Node2D"]
+[node name="Bottom" type="Area2D" parent="Collision Detection"]
 
-[node name="Down Collision" type="CollisionShape2D" parent="Node2D/Area2D4"]
+[node name="Down Collision" type="CollisionShape2D" parent="Collision Detection/Bottom"]
 position = Vector2(0, 160)
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_8mqnw")
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="body_entered" from="Collision Detection/Left" to="." method="_on_left_body_entered"]
+[connection signal="body_entered" from="Collision Detection/Right" to="." method="_on_right_body_entered"]
+[connection signal="body_entered" from="Collision Detection/Top" to="." method="_on_top_body_entered"]
+[connection signal="body_entered" from="Collision Detection/Bottom" to="." method="_on_bottom_body_entered"]
