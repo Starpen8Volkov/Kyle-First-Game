@@ -8,7 +8,7 @@
 
 [node name="TileMap" type="Node2D" parent="."]
 
-[node name="background" type="TileMapLayer" parent="TileMap"]
+[node name="background" type="TileMapLayer" parent="TileMap" groups=["tilemap"]]
 z_index = -5
 texture_filter = 1
 use_parent_material = true
@@ -50,7 +50,7 @@ use_parent_material = true
 tile_set = ExtResource("1_3vq46")
 
 [node name="Player" parent="." instance=ExtResource("2_cc8cj")]
-position = Vector2(263, 285)
+position = Vector2(152, 200)
 
 [node name="Key" parent="." instance=ExtResource("3_me8s6")]
 position = Vector2(223, 223)
