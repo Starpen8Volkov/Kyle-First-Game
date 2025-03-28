@@ -21,13 +21,13 @@ func _process(_delta):
 	var directionX = Input.get_axis("Player_Left","Player_Right")
 	var directionY = Input.get_axis("Player_Up","Player_Down")
 	
-	if Input.is_action_just_released("Player_Up"):
+	if Input.is_action_just_pressed("Player_Up"):
 		lastDir=0
-	if Input.is_action_just_released("Player_Right"):
+	if Input.is_action_just_pressed("Player_Right"):
 		lastDir=1
-	if Input.is_action_just_released("Player_Down"):
+	if Input.is_action_just_pressed("Player_Down"):
 		lastDir=2
-	if Input.is_action_just_released("Player_Left"):
+	if Input.is_action_just_pressed("Player_Left"):
 		lastDir=3
 	
 	if directionX!=null && toMove.x==0:
