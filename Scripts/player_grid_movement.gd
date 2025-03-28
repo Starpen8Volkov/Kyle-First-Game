@@ -55,3 +55,19 @@ func _on_timer_timeout():
 			sprite.play("up")
 		
 		toMove=Vector2(0,0)
+
+
+func _on_left_body_entered(body):
+	pass # Replace with function body.
+
+
+func _on_right_body_entered(body):
+	pass # Replace with function body.
+
+
+func _on_top_body_entered(body):
+	pass # Replace with function body.
+
+
+func _on_bottom_body_entered(body):
+	pass # Replace with function body.
