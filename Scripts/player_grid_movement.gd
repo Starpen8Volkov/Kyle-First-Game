@@ -6,6 +6,7 @@ var lastDir = 0
 var toMove=Vector2(0,0)
 var cam
 var sprite
+var leftTouch = []
 
 func _ready():
 	cam = get_tree().get_first_node_in_group("player_camera")
@@ -31,7 +32,16 @@ func _process(_delta):
 		lastDir=3
 	
 	if directionX!=null && toMove.x==0:
-		if lastDir==1 or lastDir==3:
+		if lastDir==3:
+			var hasSolid=false
+			if leftTouch.size()>0:
+				for b in leftTouch:
+					#print(b.tile_set.get_physics_layer_collision_layer(2))
+					if b.tile_set.get_physics_layer_collision_layer(1)==2:
+						hasSolid=true
+			if hasSolid==false:
+				toMove.x+=(tileSize.x)*directionX
+		elif lastDir==1:
 			toMove.x+=(tileSize.x)*directionX
 	if directionY!=null && toMove.y==0:
 		if lastDir==0 or lastDir==2:
@@ -58,8 +68,9 @@ func _on_timer_timeout():
 
 
 func _on_left_body_entered(body):
-	pass # Replace with function body.
-
+	if body!=Global.Player:
+		leftTouch.append(body)
+		print(leftTouch)
 
 func _on_right_body_entered(body):
 	pass # Replace with function body.
@@ -71,3 +82,7 @@ func _on_top_body_entered(body):
 
 func _on_bottom_body_entered(body):
 	pass # Replace with function body.
+
+
+func _on_left_body_exited(body: Node2D) -> void:
+	leftTouch.erase(body)

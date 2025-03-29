@@ -11,6 +11,8 @@ size = Vector2(160, 160)
 
 [node name="Player" type="CharacterBody2D" groups=["player"]]
 scale = Vector2(0.1, 0.1)
+collision_layer = 31
+collision_mask = 31
 motion_mode = 1
 script = ExtResource("1_gfkw8")
 
@@ -56,6 +58,7 @@ shape = SubResource("RectangleShape2D_8mqnw")
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
 [connection signal="body_entered" from="Collision Detection/Left" to="." method="_on_left_body_entered"]
+[connection signal="body_exited" from="Collision Detection/Left" to="." method="_on_left_body_exited"]
 [connection signal="body_entered" from="Collision Detection/Right" to="." method="_on_right_body_entered"]
 [connection signal="body_entered" from="Collision Detection/Top" to="." method="_on_top_body_entered"]
 [connection signal="body_entered" from="Collision Detection/Bottom" to="." method="_on_bottom_body_entered"]
