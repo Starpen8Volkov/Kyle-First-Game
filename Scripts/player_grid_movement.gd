@@ -6,9 +6,8 @@ var lastDir = 0
 var toMove=Vector2(0,0)
 var cam
 var sprite
-var touches = {
-	"left":[], 'right':[], 'top':[], 'bottom':[]
-}
+var touches = []
+var moveLocks = []
 
 func _ready():
 	cam = get_tree().get_first_node_in_group("player_camera")
@@ -34,44 +33,17 @@ func _process(_delta):
 		lastDir=3
 	
 	if directionX!=null && toMove.x==0:
-		if lastDir==3:
-			var hasSolid=false
-			if touches['left'].size()>0:
-				for b in touches['left']:
-					if b.tile_set.get_physics_layer_collision_layer(1)==2:
-						hasSolid=true
-			if hasSolid==false:
-				toMove.x+=(tileSize.x)*directionX
-		elif lastDir==1:
-			var hasSolid=false
-			if touches['right'].size()>0:
-				for b in touches['right']:
-					if b.tile_set.get_physics_layer_collision_layer(1)==2:
-						hasSolid=true
-			if hasSolid==false:
-				toMove.x+=(tileSize.x)*directionX
+		if lastDir==1 or lastDir==3:
+			toMove.x+=(tileSize.x)*directionX
 	if directionY!=null && toMove.y==0:
-		if lastDir==0:
-			var hasSolid=false
-			if touches['top'].size()>0:
-				for b in touches['top']:
-					if b.tile_set.get_physics_layer_collision_layer(1)==2:
-						hasSolid=true
-			if hasSolid==false:
-				toMove.y+=(tileSize.y)*directionY
-		elif lastDir==3:
-			var hasSolid=false
-			if touches['bottom'].size()>0:
-				for b in touches['bottom']:
-					if b.tile_set.get_physics_layer_collision_layer(1)==2:
-						hasSolid=true
-			if hasSolid==false:
-				toMove.y+=(tileSize.y)*directionY
+		if lastDir==0 or lastDir==2:
+			toMove.y+=(tileSize.y)*directionY
 
 func _on_timer_timeout():
 	if toMove==Vector2(0,0):
 		sprite.stop()
 	else:
+		print(touches)
 		position+=toMove
 		cam.position=position
 		
@@ -90,35 +62,35 @@ func _on_timer_timeout():
 
 func _on_left_body_entered(body):
 	if body!=Global.Player:
-		touches['left'].append(body)
+		touches.append([body,body.position-position])
 		#print(body.tile_set.get_physics_layer_collision_layer(2))
 
 func _on_right_body_entered(body):
 	if body!=Global.Player:
-		touches['right'].append(body)
+		touches.append([body,body.position-position])
 
 
 func _on_top_body_entered(body):
 	if body!=Global.Player:
-		touches['top'].append(body)
+		touches.append([body,body.position-position])
 
 
 func _on_bottom_body_entered(body):
 	if body!=Global.Player:
-		touches['bottom'].append(body)
+		touches.append([body,body.position-position])
 
 
-func _on_left_body_exited(body: Node2D) -> void:
-	touches['left'].erase(body)
+func _on_left_body_exited(body):
+	touches.erase([body,body.position-position])
 
 
 func _on_right_body_exited(body):
-	touches['right'].erase(body)
+	touches.erase([body,body.position-position])
 
 
 func _on_top_body_exited(body):
-	touches['top'].erase(body)
+	touches.erase([body,body.position-position])
 
 
 func _on_bottom_body_exited(body):
-	touches['bottom'].erase(body)
+	touches.erase([body,body.position-position])
