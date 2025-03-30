@@ -62,28 +62,28 @@ func _on_timer_timeout():
 
 
 func collidingBodies(body):
-	print(body.position,(toMove+position)-(tileSize/2))
-	return body.position==(toMove+position)-(tileSize/2)
+	#print(body.position,(toMove+position)-(tileSize/2))
+	return body[1]==(toMove+position)-(tileSize/2)
 
 
 func _on_left_body_entered(body):
 	if body!=Global.Player:
-		touches.append(body)
+		touches.append([body,position+Vector2(-tileSize.x,0)])
 		#print(body.tile_set.get_physics_layer_collision_layer(2))
 
 func _on_right_body_entered(body):
 	if body!=Global.Player:
-		touches.append(body)
+		touches.append([body,position+Vector2(tileSize.x,0)])
 
 
 func _on_top_body_entered(body):
 	if body!=Global.Player:
-		touches.append(body)
+		touches.append([body,position+Vector2(0,-tileSize.y)])
 
 
 func _on_bottom_body_entered(body):
 	if body!=Global.Player:
-		touches.append(body)
+		touches.append([body,position+Vector2(0,tileSize.y)])
 
 
 func _on_left_body_exited(body):
