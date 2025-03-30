@@ -43,10 +43,30 @@ func _process(_delta):
 			if hasSolid==false:
 				toMove.x+=(tileSize.x)*directionX
 		elif lastDir==1:
-			toMove.x+=(tileSize.x)*directionX
+			var hasSolid=false
+			if touches['right'].size()>0:
+				for b in touches['right']:
+					if b.tile_set.get_physics_layer_collision_layer(1)==2:
+						hasSolid=true
+			if hasSolid==false:
+				toMove.x+=(tileSize.x)*directionX
 	if directionY!=null && toMove.y==0:
-		if lastDir==0 or lastDir==2:
-			toMove.y+=(tileSize.y)*directionY
+		if lastDir==0:
+			var hasSolid=false
+			if touches['top'].size()>0:
+				for b in touches['top']:
+					if b.tile_set.get_physics_layer_collision_layer(1)==2:
+						hasSolid=true
+			if hasSolid==false:
+				toMove.y+=(tileSize.y)*directionY
+		elif lastDir==3:
+			var hasSolid=false
+			if touches['bottom'].size()>0:
+				for b in touches['bottom']:
+					if b.tile_set.get_physics_layer_collision_layer(1)==2:
+						hasSolid=true
+			if hasSolid==false:
+				toMove.y+=(tileSize.y)*directionY
 
 func _on_timer_timeout():
 	if toMove==Vector2(0,0):
@@ -71,19 +91,34 @@ func _on_timer_timeout():
 func _on_left_body_entered(body):
 	if body!=Global.Player:
 		touches['left'].append(body)
-		print(body.tile_set.get_physics_layer_collision_layer(2))
+		#print(body.tile_set.get_physics_layer_collision_layer(2))
 
 func _on_right_body_entered(body):
-	pass # Replace with function body.
+	if body!=Global.Player:
+		touches['right'].append(body)
 
 
 func _on_top_body_entered(body):
-	pass # Replace with function body.
+	if body!=Global.Player:
+		touches['top'].append(body)
 
 
 func _on_bottom_body_entered(body):
-	pass # Replace with function body.
+	if body!=Global.Player:
+		touches['bottom'].append(body)
 
 
 func _on_left_body_exited(body: Node2D) -> void:
 	touches['left'].erase(body)
+
+
+func _on_right_body_exited(body):
+	touches['right'].erase(body)
+
+
+func _on_top_body_exited(body):
+	touches['top'].erase(body)
+
+
+func _on_bottom_body_exited(body):
+	touches['bottom'].erase(body)

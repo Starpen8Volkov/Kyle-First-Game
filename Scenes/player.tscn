@@ -60,5 +60,8 @@ shape = SubResource("RectangleShape2D_8mqnw")
 [connection signal="body_entered" from="Collision Detection/Left" to="." method="_on_left_body_entered"]
 [connection signal="body_exited" from="Collision Detection/Left" to="." method="_on_left_body_exited"]
 [connection signal="body_entered" from="Collision Detection/Right" to="." method="_on_right_body_entered"]
+[connection signal="body_exited" from="Collision Detection/Right" to="." method="_on_right_body_exited"]
 [connection signal="body_entered" from="Collision Detection/Top" to="." method="_on_top_body_entered"]
+[connection signal="body_exited" from="Collision Detection/Top" to="." method="_on_top_body_exited"]
 [connection signal="body_entered" from="Collision Detection/Bottom" to="." method="_on_bottom_body_entered"]
+[connection signal="body_exited" from="Collision Detection/Bottom" to="." method="_on_bottom_body_exited"]
