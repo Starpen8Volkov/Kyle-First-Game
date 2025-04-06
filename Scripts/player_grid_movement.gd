@@ -43,54 +43,60 @@ func _on_timer_timeout():
 	if toMove==Vector2(0,0):
 		sprite.stop()
 	else:
-		print(touches)
-		position+=toMove
-		cam.position=position
+		#check collision
+		if !touches.any(collidingBodies):
+			position+=toMove
+			cam.position=position
 		
-		#animation
-		if toMove.x>0:
-			sprite.play("right")
-		elif toMove.x<0:
-			sprite.play("left")
-		elif toMove.y>0:
-			sprite.play("down")
-		elif toMove.y<0:
-			sprite.play("up")
+			#animation
+			if toMove.x>0:
+				sprite.play("right")
+			elif toMove.x<0:
+				sprite.play("left")
+			elif toMove.y>0:
+				sprite.play("down")
+			elif toMove.y<0:
+				sprite.play("up")
 		
 		toMove=Vector2(0,0)
 
 
+func collidingBodies(body):
+	#print(body.position,(toMove+position)-(tileSize/2))
+	return body[1]==(toMove+position)-(tileSize/2)
+
+
 func _on_left_body_entered(body):
 	if body!=Global.Player:
-		touches.append([body,body.position-position])
+		touches.append([body,position+Vector2(-tileSize.x,0)])
 		#print(body.tile_set.get_physics_layer_collision_layer(2))
 
 func _on_right_body_entered(body):
 	if body!=Global.Player:
-		touches.append([body,body.position-position])
+		touches.append([body,position+Vector2(tileSize.x,0)])
 
 
 func _on_top_body_entered(body):
 	if body!=Global.Player:
-		touches.append([body,body.position-position])
+		touches.append([body,position+Vector2(0,-tileSize.y)])
 
 
 func _on_bottom_body_entered(body):
 	if body!=Global.Player:
-		touches.append([body,body.position-position])
+		touches.append([body,position+Vector2(0,tileSize.y)])
 
 
 func _on_left_body_exited(body):
-	touches.erase([body,body.position-position])
+	touches.erase(body)
 
 
 func _on_right_body_exited(body):
-	touches.erase([body,body.position-position])
+	touches.erase(body)
 
 
 func _on_top_body_exited(body):
-	touches.erase([body,body.position-position])
+	touches.erase(body)
 
 
 func _on_bottom_body_exited(body):
-	touches.erase([body,body.position-position])
+	touches.erase(body)
