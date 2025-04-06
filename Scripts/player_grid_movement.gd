@@ -40,6 +40,7 @@ func _process(_delta):
 			toMove.y+=(tileSize.y)*directionY
 
 func _on_timer_timeout():
+	#print(touches,toMove+position)
 	if toMove==Vector2(0,0):
 		sprite.stop()
 	else:
@@ -62,8 +63,12 @@ func _on_timer_timeout():
 
 
 func collidingBodies(body):
-	#print(body.position,(toMove+position)-(tileSize/2))
-	return body[1]==(toMove+position)-(tileSize/2)
+	#print(body[1],(toMove+position))
+	return body[1]==(toMove+position)
+
+
+func checkBody(b,body):
+	return b[0]==body
 
 
 func _on_left_body_entered(body):
@@ -87,16 +92,16 @@ func _on_bottom_body_entered(body):
 
 
 func _on_left_body_exited(body):
-	touches.erase(body)
+	print(touches.pop_at(touches.find_custom(checkBody.bind(body))))
 
 
 func _on_right_body_exited(body):
-	touches.erase(body)
+	print(touches.pop_at(touches.find_custom(checkBody.bind(body))))
 
 
 func _on_top_body_exited(body):
-	touches.erase(body)
+	print(touches.pop_at(touches.find_custom(checkBody.bind(body))))
 
 
 func _on_bottom_body_exited(body):
-	touches.erase(body)
+	print(touches.pop_at(touches.find_custom(checkBody.bind(body))))
