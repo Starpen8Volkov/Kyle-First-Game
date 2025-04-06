@@ -3,4 +3,7 @@ res://Assets/Tilesets/overworld.tres
 res://Assets/Spriteframes/player_frames.tres
 res://Scenes/map1.tscn
 res://Scenes/player.tscn
+<<<<<<< Updated upstream
 res://Scripts/player_grid_movement.gd
+=======
+>>>>>>> Stashed changes
