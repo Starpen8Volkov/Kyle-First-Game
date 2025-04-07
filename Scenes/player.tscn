@@ -1,10 +1,10 @@
 [gd_scene load_steps=5 format=3 uid="uid://bjv117g4u3uxn"]
 
-[ext_resource type="Script" uid="uid://dqbsw8ylxksoi" path="res://Scripts/player_grid_movement.gd" id="1_gfkw8"]
+[ext_resource type="Script" uid="uid://t8hkijt1fwsf" path="res://Scripts/player.gd" id="1_cvnsp"]
 [ext_resource type="SpriteFrames" uid="uid://c4ukbjfnk438o" path="res://Assets/Spriteframes/player_frames.tres" id="2_jkj8r"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_am3h0"]
-size = Vector2(160, 160)
+size = Vector2(155, 155)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8mqnw"]
 size = Vector2(100, 100)
@@ -14,7 +14,7 @@ scale = Vector2(0.1, 0.1)
 collision_layer = 31
 collision_mask = 31
 motion_mode = 1
-script = ExtResource("1_gfkw8")
+script = ExtResource("1_cvnsp")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-1.19209e-06, 1.16229e-05)
@@ -57,11 +57,3 @@ position = Vector2(0, 160)
 shape = SubResource("RectangleShape2D_8mqnw")
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
-[connection signal="body_entered" from="Collision Detection/Left" to="." method="_on_left_body_entered"]
-[connection signal="body_exited" from="Collision Detection/Left" to="." method="_on_left_body_exited"]
-[connection signal="body_entered" from="Collision Detection/Right" to="." method="_on_right_body_entered"]
-[connection signal="body_exited" from="Collision Detection/Right" to="." method="_on_right_body_exited"]
-[connection signal="body_entered" from="Collision Detection/Top" to="." method="_on_top_body_entered"]
-[connection signal="body_exited" from="Collision Detection/Top" to="." method="_on_top_body_exited"]
-[connection signal="body_entered" from="Collision Detection/Bottom" to="." method="_on_bottom_body_entered"]
-[connection signal="body_exited" from="Collision Detection/Bottom" to="." method="_on_bottom_body_exited"]
