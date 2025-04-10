@@ -53,6 +53,12 @@ func _process(_delta):
 	if directionY!=null && toMove.y==0:
 		if lastDir==0 or lastDir==2:
 			toMove=Vector2(0,(Global.tileSize.y)*directionY)
+	
+	#interactables
+	if lastDir==0:
+		#top
+		if collisionAreas["top"].get_overlapping_bodies().any(are_dynamic):
+			pass
 
 func _on_timer_timeout():
 	if toMove==Vector2(0,0):
@@ -88,3 +94,6 @@ func areSolid(body):
 func movePlayerTo(pos):
 	position=pos
 	cam.position=pos
+
+func are_dynamic(body):
+	return Global.dynamics.has(body)
