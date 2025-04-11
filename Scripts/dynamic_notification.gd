@@ -1,14 +1,14 @@
 extends Sprite2D
 
-var minA=50
-var maxA=200
-var dir=-1
+var minA=0.2
+var maxA=0.8
+var dir=1
 var tween
-var transparency=maxA
-var started=false
+var transparency=minA
+var started=true
 
 func _process(_delta: float) -> void:
-	modulate.a=transparency
+	self_modulate.a=transparency
 	print(transparency,self_modulate.a)
 
 func blink():
@@ -28,9 +28,19 @@ func start(b):
 		if tween!=null:
 			tween.kill()
 			tween=null
-		if b:
-			$Timer.start()
-		else:
-			$Timer.stop()
 		visible=b
 		started=b
+		if b:
+			self_modulate.a=minA
+			dir=1
+			tween=create_tween()
+			tween.tween_property(self,"transparency",maxA,$Timer.wait_time)
+			tween.tween_callback(start_tween)
+		else:
+			$Timer.stop()
+
+func start_tween():
+	tween=null
+	$Timer.start()
+	self_modulate.a=maxA
+	dir=-1
