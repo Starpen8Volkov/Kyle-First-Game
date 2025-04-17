@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-var lastDir = 0
+var lastDir = "left"
 var toMove=Vector2(0,0)
 var cam
 var sprite
@@ -16,6 +16,7 @@ var collisionAreas = {
 	'top':null,
 	'bottom':null
 }
+var Tiledirections
 
 func _physics_process(_delta):
 	pass
@@ -29,6 +30,12 @@ func _ready():
 		'top':$"Collision Detection/Top",
 		'bottom':$"Collision Detection/Bottom"
 	}
+	Tiledirections={
+		'left':Vector2(-1*Global.tileSize.x,0),
+		'right':Vector2(1*Global.tileSize.x,0),
+		'top':Vector2(0,-1*Global.tileSize.y),
+		'bottom':Vector2(0,1*Global.tileSize.y)
+	}
 	
 	position = ((position/Global.tileSize).round()*Global.tileSize)+(Global.tileSize/2)
 	cam.position=position
@@ -39,26 +46,28 @@ func _process(_delta):
 	var directionY = Input.get_axis("Player_Up","Player_Down")
 	
 	if Input.is_action_just_pressed("Player_Up"):
-		lastDir=0
+		lastDir="top"
 	if Input.is_action_just_pressed("Player_Right"):
-		lastDir=1
+		lastDir="right"
 	if Input.is_action_just_pressed("Player_Down"):
-		lastDir=2
+		lastDir="bottom"
 	if Input.is_action_just_pressed("Player_Left"):
-		lastDir=3
+		lastDir="left"
 	
 	if directionX!=null && toMove.x==0:
-		if lastDir==1 or lastDir==3:
+		if lastDir=="left" or lastDir=="right":
 			toMove=Vector2((Global.tileSize.x)*directionX,0)
 	if directionY!=null && toMove.y==0:
-		if lastDir==0 or lastDir==2:
+		if lastDir=="top" or lastDir=="bottom":
 			toMove=Vector2(0,(Global.tileSize.y)*directionY)
 	
 	#interactables
-	if lastDir==0:
-		#top
-		if collisionAreas["top"].get_overlapping_bodies().any(are_dynamic):
-			pass
+	if collisionAreas[lastDir].get_overlapping_bodies().any(are_dynamic):
+		$ButtonE.position=Tiledirections[lastDir]*10
+		$ButtonE.start(true)
+	else:
+		$ButtonE.start(false)
+
 
 func _on_timer_timeout():
 	if toMove==Vector2(0,0):
