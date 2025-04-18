@@ -17,6 +17,7 @@ var collisionAreas = {
 	'bottom':null
 }
 var Tiledirections
+var interactable=false
 
 func _physics_process(_delta):
 	pass
@@ -65,8 +66,12 @@ func _process(_delta):
 	if collisionAreas[lastDir].get_overlapping_bodies().any(are_dynamic):
 		$ButtonE.position=Tiledirections[lastDir]*10
 		$ButtonE.start(true)
+		interactable=true
+		if Input.is_action_just_pressed("Interact"):
+			interact(collisionAreas[lastDir])
 	else:
 		$ButtonE.start(false)
+		interactable=false
 
 
 func _on_timer_timeout():
@@ -106,3 +111,18 @@ func movePlayerTo(pos):
 
 func are_dynamic(body):
 	return Global.dynamics.has(body)
+
+func interact(area):
+	#print(Global.doors[0].get_cell_source_id((Vector2i((area.global_position-(Global.tileSize/2))/Global.tileSize)))," ",Global.doors[0].get_cell_tile_data((Vector2i((area.global_position-(Global.tileSize/2))/Global.tileSize))).get_custom_data("door"))
+	if area.get_overlapping_bodies().any(areDoor.bind(area)):
+		if area.get_overlapping_bodies().any(areClosedDoor):
+			Global.doors[0].erase_cell(Vector2i((area.global_position-(Global.tileSize/2))/Global.tileSize))
+		else:
+			Global.doors[0].set_cell(Vector2i((area.global_position-(Global.tileSize/2))/Global.tileSize),1,Vector2i(1,7))
+			position=position
+
+func areDoor(body,area):
+	return body.get_cell_tile_data((Vector2i((area.global_position-(Global.tileSize/2))/Global.tileSize))).get_custom_data("door")
+
+func areClosedDoor(body):
+	return Global.doors.has(body)

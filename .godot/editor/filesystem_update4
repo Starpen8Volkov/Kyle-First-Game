@@ -6,3 +6,5 @@ res://Scenes/map1.tscn
 res://Scenes/player.tscn
 res://Scenes/key.tscn
 res://Scenes/Dynamic Notification.tscn
+res://Scripts/global.gd
+res://Scripts/player.gd
