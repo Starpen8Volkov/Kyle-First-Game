@@ -34,27 +34,27 @@ autostart = true
 [node name="Collision Detection" type="Node2D" parent="."]
 
 [node name="Left" type="Area2D" parent="Collision Detection"]
+position = Vector2(-160, 0)
 
 [node name="Left Collision" type="CollisionShape2D" parent="Collision Detection/Left"]
-position = Vector2(-160, 0)
 shape = SubResource("RectangleShape2D_8mqnw")
 
 [node name="Right" type="Area2D" parent="Collision Detection"]
+position = Vector2(160, 0)
 
 [node name="Right Collision" type="CollisionShape2D" parent="Collision Detection/Right"]
-position = Vector2(160, 0)
 shape = SubResource("RectangleShape2D_8mqnw")
 
 [node name="Top" type="Area2D" parent="Collision Detection"]
+position = Vector2(0, -160)
 
 [node name="Up Collision" type="CollisionShape2D" parent="Collision Detection/Top"]
-position = Vector2(0, -160)
 shape = SubResource("RectangleShape2D_8mqnw")
 
 [node name="Bottom" type="Area2D" parent="Collision Detection"]
+position = Vector2(0, 160)
 
 [node name="Down Collision" type="CollisionShape2D" parent="Collision Detection/Bottom"]
-position = Vector2(0, 160)
 shape = SubResource("RectangleShape2D_8mqnw")
 
 [node name="ButtonE" parent="." instance=ExtResource("3_6t5aa")]

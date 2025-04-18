@@ -8,6 +8,7 @@ var tileSize = Vector2(0,0)
 var solids
 var borderSize=20
 var dynamics
+var doors
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -48,5 +49,6 @@ func loadmap(m,l):
 	tileSize = Vector2(tileMap.tile_set.tile_size)
 	solids = get_tree().get_nodes_in_group("solid")
 	dynamics = get_tree().get_nodes_in_group("dynamic")
+	doors = get_tree().get_nodes_in_group("door")
 	
 	generateKeys(15)
