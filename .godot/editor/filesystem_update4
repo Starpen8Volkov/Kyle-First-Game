@@ -1,3 +1,10 @@
-res://Scenes/map1.tscn
+res://Scenes/level template.tscn
 res://Assets/Tilesets/overworld.tres
 res://Assets/Spriteframes/player_frames.tres
+res://Scripts/global.gd
+res://Scenes/House Indoor.tscn
+res://Scenes/main_game_window.tscn
+res://Scenes/player.tscn
+res://Scenes/key.tscn
+res://Scenes/Dynamic Notification.tscn
+res://Scenes/map1.tscn

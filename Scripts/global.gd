@@ -9,10 +9,13 @@ var solids
 var borderSize=20
 var dynamics
 var doors
+var windowSize=Vector2(800,448)
+var main
+var Mapname="House Indoor"
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	loadmap(1,false)
+	loadmap(Mapname,true)
 	pass
 
 
@@ -37,12 +40,19 @@ func generateKeys(num):
 
 
 func chooseRandomTile(node):
-	node.position = ((Vector2(randi_range(0+borderSize,800-borderSize),randi_range(0+borderSize,450-borderSize))/Global.tileSize).round()*Global.tileSize)+(Global.tileSize/2)
+	node.position = ((Vector2(randi_range(0+borderSize,windowSize.x-borderSize),randi_range(0+borderSize,windowSize.y-borderSize))/Global.tileSize).round()*Global.tileSize)+(Global.tileSize/2)
 
 
 func loadmap(m,l):
+	main=get_tree().get_first_node_in_group("Main")
 	if l:
-		get_tree().change_scene_to_file("res://Scenes/map"+str(m)+".tscn")
+		#get_tree().change_scene_to_file("res://Scenes/map"+str(m)+".tscn")
+		var newMap=load("res://Scenes/"+str(m)+".tscn")
+		newMap=newMap.instantiate()
+		var Oldmap=main.get_node("Map").get_child(0)
+		if Oldmap!=null:
+			Oldmap.queue_free()
+		main.get_node("Map").add_child(newMap)
 	
 	Player=get_tree().get_first_node_in_group("player")
 	tileMap = get_tree().get_first_node_in_group("tilemap") 
