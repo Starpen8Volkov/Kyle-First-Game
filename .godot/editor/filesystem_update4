@@ -1,10 +1,2 @@
-res://Scenes/main_game_window.tscn
 res://Assets/Tilesets/overworld.tres
 res://Assets/Spriteframes/player_frames.tres
-res://Scripts/dynamic_notification.gd
-res://Scenes/map1.tscn
-res://Scenes/player.tscn
-res://Scenes/key.tscn
-res://Scenes/Dynamic Notification.tscn
-res://Scripts/global.gd
-res://Scripts/player.gd
