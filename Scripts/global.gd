@@ -11,7 +11,8 @@ var dynamics
 var doors
 var windowSize=Vector2(800,448)
 var main
-var Mapname="House Indoor"
+var Mapname="map1"
+var changingScenes=false
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -44,13 +45,14 @@ func chooseRandomTile(node):
 
 
 func loadmap(m,l):
+	changingScenes=true
 	main=get_tree().get_first_node_in_group("Main")
 	if l:
 		#get_tree().change_scene_to_file("res://Scenes/map"+str(m)+".tscn")
 		var newMap=load("res://Scenes/"+str(m)+".tscn")
 		newMap=newMap.instantiate()
-		var Oldmap=main.get_node("Map").get_child(0)
-		if Oldmap!=null:
+		if main.get_node("Map").get_child_count()>0:
+			var Oldmap=main.get_node("Map").get_child(0)
 			Oldmap.queue_free()
 		main.get_node("Map").add_child(newMap)
 	
@@ -60,5 +62,5 @@ func loadmap(m,l):
 	solids = get_tree().get_nodes_in_group("solid")
 	dynamics = get_tree().get_nodes_in_group("dynamic")
 	doors = get_tree().get_nodes_in_group("door")
-	
-	generateKeys(15)
+	changingScenes=false
+	#generateKeys(15)

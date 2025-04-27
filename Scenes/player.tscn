@@ -12,10 +12,11 @@ size = Vector2(100, 100)
 
 [node name="Player" type="CharacterBody2D" groups=["player"]]
 scale = Vector2(0.1, 0.1)
-collision_layer = 31
-collision_mask = 31
+collision_layer = 27
+collision_mask = 27
 motion_mode = 1
 script = ExtResource("1_cvnsp")
+metadata/Direction = "left"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-1.19209e-06, 1.16229e-05)
@@ -35,26 +36,41 @@ autostart = true
 
 [node name="Left" type="Area2D" parent="Collision Detection"]
 position = Vector2(-160, 0)
+collision_layer = 4
+collision_mask = 4
 
 [node name="Left Collision" type="CollisionShape2D" parent="Collision Detection/Left"]
 shape = SubResource("RectangleShape2D_8mqnw")
 
 [node name="Right" type="Area2D" parent="Collision Detection"]
 position = Vector2(160, 0)
+collision_layer = 4
+collision_mask = 4
 
 [node name="Right Collision" type="CollisionShape2D" parent="Collision Detection/Right"]
 shape = SubResource("RectangleShape2D_8mqnw")
 
 [node name="Top" type="Area2D" parent="Collision Detection"]
 position = Vector2(0, -160)
+collision_layer = 4
+collision_mask = 4
 
 [node name="Up Collision" type="CollisionShape2D" parent="Collision Detection/Top"]
 shape = SubResource("RectangleShape2D_8mqnw")
 
 [node name="Bottom" type="Area2D" parent="Collision Detection"]
 position = Vector2(0, 160)
+collision_layer = 4
+collision_mask = 4
 
 [node name="Down Collision" type="CollisionShape2D" parent="Collision Detection/Bottom"]
+shape = SubResource("RectangleShape2D_8mqnw")
+
+[node name="Middle" type="Area2D" parent="Collision Detection"]
+collision_layer = 4
+collision_mask = 4
+
+[node name="Middle Collision" type="CollisionShape2D" parent="Collision Detection/Middle"]
 shape = SubResource("RectangleShape2D_8mqnw")
 
 [node name="ButtonE" parent="." instance=ExtResource("3_6t5aa")]

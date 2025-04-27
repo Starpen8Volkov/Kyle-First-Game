@@ -57,7 +57,8 @@ use_parent_material = true
 tile_set = ExtResource("1_xebma")
 
 [node name="Player" parent="." instance=ExtResource("2_18hui")]
-position = Vector2(134, 101)
+position = Vector2(135, 119)
+metadata/Direction = "up"
 
 [node name="Camera2D" type="Camera2D" parent="." groups=["player_camera"]]
 zoom = Vector2(4, 4)
