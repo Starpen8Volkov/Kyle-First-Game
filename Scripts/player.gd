@@ -27,9 +27,9 @@ var stoppedScript=false
 func _physics_process(_delta):
 	pass
 
-func _ready():
-	cam = get_tree().get_first_node_in_group("player_camera")
-	sprite = get_tree().get_first_node_in_group("player_sprite")
+func reload():
+	cam = get_tree().get_nodes_in_group("player_camera")[-1]
+	sprite = get_tree().get_nodes_in_group("player_sprite")[-1]
 	collisionAreas = {
 		'left':$"Collision Detection/Left",
 		'right':$"Collision Detection/Right",
@@ -50,6 +50,9 @@ func _ready():
 	cam.position=position
 	
 	sprite.play(startDirection)
+
+func _ready():
+	reload()
 
 func _process(_delta):
 	if !stoppedScript:
@@ -87,7 +90,7 @@ func _process(_delta):
 		#teleport
 		if collisionAreas["middle"].get_overlapping_bodies().any(are_open_door.bind(collisionAreas["middle"])):
 			stopscript()
-			Global.loadmap("House Indoor",true)
+			Global.loadmap(get_location(Global.doors,collisionAreas["middle"]),true)
 			
 		#position update
 		if nextMove!=null:
@@ -98,26 +101,26 @@ func _process(_delta):
 func _on_timer_timeout():
 	if !stoppedScript:
 		if toMove==Vector2(0,0):
-			sprite.stop()
+			update_sprite("stop")
 		else:
 			#animation & movement/collision
 			var allowedToMove=false
 			if toMove.x<0:
 				if !collisionAreas['left'].get_overlapping_bodies().any(areSolid):
 					allowedToMove=true
-				sprite.play("left")
+				update_sprite("left")
 			elif toMove.x>0:
 				if !collisionAreas['right'].get_overlapping_bodies().any(areSolid):
 					allowedToMove=true
-				sprite.play("right")
+				update_sprite("right")
 			elif toMove.y>0:
 				if !collisionAreas['bottom'].get_overlapping_bodies().any(areSolid):
 					allowedToMove=true
-				sprite.play("down")
+				update_sprite("down")
 			elif toMove.y<0:
 				if !collisionAreas['top'].get_overlapping_bodies().any(areSolid):
 					allowedToMove=true
-				sprite.play("up")
+				update_sprite("up")
 			
 			if allowedToMove:
 				nextMove=position+toMove
@@ -128,8 +131,9 @@ func areSolid(body):
 	return Global.solids.has(body)
 
 func movePlayerTo(pos):
-	position=pos
-	cam.position=pos
+	if is_instance_valid(cam):
+		position=pos
+		cam.position=pos
 
 func are_dynamic(body):
 	return Global.dynamics.has(body)
@@ -155,6 +159,19 @@ func are_open_door(body,area):
 		return false
 	return cellData.get_custom_data("open_door")
 
+func get_location(body,area):
+	var cellData=body.get_cell_tile_data((Vector2i((area.global_position-(Global.tileSize/2))/Global.tileSize)))
+	if body==null or cellData==null:
+		return false
+	return cellData.get_custom_data("location")
+
 func stopscript():
 	$Timer.stop()
 	stoppedScript=true
+
+func update_sprite(s):
+	if is_instance_valid(sprite):
+		if s=="stop":
+			sprite.stop()
+		else:
+			sprite.play(s)

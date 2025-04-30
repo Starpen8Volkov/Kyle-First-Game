@@ -52,15 +52,20 @@ func loadmap(m,l):
 		var newMap=load("res://Scenes/"+str(m)+".tscn")
 		newMap=newMap.instantiate()
 		if main.get_node("Map").get_child_count()>0:
-			var Oldmap=main.get_node("Map").get_child(0)
-			Oldmap.queue_free()
+			deleteOldmap()
 		main.get_node("Map").add_child(newMap)
 	
-	Player=get_tree().get_first_node_in_group("player")
-	tileMap = get_tree().get_first_node_in_group("tilemap") 
+	if Player!=null:
+		Player.reload()
+	Player=get_tree().get_nodes_in_group("player")[-1]
+	tileMap = get_tree().get_nodes_in_group("tilemap")[-1]
 	tileSize = Vector2(tileMap.tile_set.tile_size)
 	solids = get_tree().get_nodes_in_group("solid")
 	dynamics = get_tree().get_nodes_in_group("dynamic")
 	doors = get_tree().get_nodes_in_group("door")
 	changingScenes=false
 	#generateKeys(15)
+
+func deleteOldmap():
+	var Oldmap=main.get_node("Map").get_child(0)
+	Oldmap.queue_free()
