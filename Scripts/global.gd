@@ -7,8 +7,8 @@ var tileMap
 var tileSize = Vector2(0,0)
 var solids
 var borderSize=20
-var dynamics
-var doors
+var dynamic
+var door
 var windowSize=Vector2(800,448)
 var main
 var Mapname="map1"
@@ -55,14 +55,14 @@ func loadmap(m,l):
 			deleteOldmap()
 		main.get_node("Map").add_child(newMap)
 	
-	if Player!=null:
-		Player.reload()
+	#if Player!=null:
+		#Player.reload()
 	Player=get_tree().get_nodes_in_group("player")[-1]
 	tileMap = get_tree().get_nodes_in_group("tilemap")[-1]
 	tileSize = Vector2(tileMap.tile_set.tile_size)
 	solids = get_tree().get_nodes_in_group("solid")
-	dynamics = get_tree().get_nodes_in_group("dynamic")
-	doors = get_tree().get_nodes_in_group("door")
+	dynamic = get_tree().get_nodes_in_group("dynamic layer")[-1]
+	door = get_tree().get_nodes_in_group("door")[-1]
 	changingScenes=false
 	#generateKeys(15)
 

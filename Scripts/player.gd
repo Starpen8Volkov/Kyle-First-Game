@@ -90,8 +90,8 @@ func _process(_delta):
 		#teleport
 		if collisionAreas["middle"].get_overlapping_bodies().any(are_open_door.bind(collisionAreas["middle"])):
 			stopscript()
-			Global.loadmap(get_location(Global.doors,collisionAreas["middle"]),true)
-			
+			Global.loadmap(get_door_location(Global.dynamic,collisionAreas["middle"]),true)
+		
 		#position update
 		if nextMove!=null:
 			movePlayerTo(nextMove)
@@ -136,22 +136,22 @@ func movePlayerTo(pos):
 		cam.position=pos
 
 func are_dynamic(body):
-	return Global.dynamics.has(body)
+	return Global.dynamic==body
 
 func interact(area):
 	#print(Global.doors[0].get_cell_source_id((Vector2i((area.global_position-(Global.tileSize/2))/Global.tileSize)))," ",Global.doors[0].get_cell_tile_data((Vector2i((area.global_position-(Global.tileSize/2))/Global.tileSize))).get_custom_data("door"))
 	if area.get_overlapping_bodies().any(areDoor.bind(area)):
 		if area.get_overlapping_bodies().any(areClosedDoor):
-			Global.doors[0].erase_cell(Vector2i((area.global_position-(Global.tileSize/2))/Global.tileSize))
+			Global.door.erase_cell(Vector2i((area.global_position-(Global.tileSize/2))/Global.tileSize))
 		else:
-			Global.doors[0].set_cell(Vector2i((area.global_position-(Global.tileSize/2))/Global.tileSize),1,Vector2i(1,7))
+			Global.door.set_cell(Vector2i((area.global_position-(Global.tileSize/2))/Global.tileSize),1,Vector2i(1,7))
 			position=position
 
 func areDoor(body,area):
 	return body.get_cell_tile_data((Vector2i((area.global_position-(Global.tileSize/2))/Global.tileSize))).get_custom_data("door")
 
 func areClosedDoor(body):
-	return Global.doors.has(body)
+	return Global.door==body
 
 func are_open_door(body,area):
 	var cellData=body.get_cell_tile_data((Vector2i((area.global_position-(Global.tileSize/2))/Global.tileSize)))
@@ -159,8 +159,8 @@ func are_open_door(body,area):
 		return false
 	return cellData.get_custom_data("open_door")
 
-func get_location(body,area):
-	var cellData=body.get_cell_tile_data((Vector2i((area.global_position-(Global.tileSize/2))/Global.tileSize)))
+func get_door_location(body,area):
+	var cellData=body.get_cell_tile_data(Vector2i((area.global_position-(Global.tileSize/2))/Global.tileSize))
 	if body==null or cellData==null:
 		return false
 	return cellData.get_custom_data("location")

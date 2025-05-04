@@ -28,7 +28,7 @@ z_index = -3
 use_parent_material = true
 tile_set = ExtResource("1_y7x70")
 
-[node name="Interactables" type="TileMapLayer" parent="TileMap" groups=["dynamic", "solid"]]
+[node name="Interactables" type="TileMapLayer" parent="TileMap" groups=["dynamic"]]
 z_index = -2
 use_parent_material = true
 tile_set = ExtResource("1_y7x70")

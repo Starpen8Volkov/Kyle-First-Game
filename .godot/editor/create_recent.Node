@@ -1,5 +1,6 @@
+Label
+CanvasLayer
 Node2D
 Timer
 ColorRect
 NavigationRegion2D
-Label

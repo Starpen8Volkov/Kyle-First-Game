@@ -1,0 +1,42 @@
+[gd_scene load_steps=3 format=3 uid="uid://20l7kqs32maf"]
+
+[ext_resource type="Texture2D" uid="uid://c23ic3yvqkhgo" path="res://Assets/sign tile.png" id="1_fmf1u"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_m6mpx"]
+line_spacing = 5.0
+font_size = 25
+
+[node name="Sign" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="SignTile" type="Sprite2D" parent="CanvasLayer"]
+position = Vector2(400, 224)
+scale = Vector2(40, 40)
+texture = ExtResource("1_fmf1u")
+
+[node name="Label" type="Label" parent="CanvasLayer"]
+texture_filter = 2
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 200.0
+offset_top = 143.0
+offset_right = -199.0
+offset_bottom = -104.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Yay game
+Yay game
+Yay game
+Yay game
+Yay game"
+label_settings = SubResource("LabelSettings_m6mpx")
+horizontal_alignment = 1
+vertical_alignment = 1
