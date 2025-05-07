@@ -1,10 +1,10 @@
 [gd_scene load_steps=3 format=3 uid="uid://20l7kqs32maf"]
 
-[ext_resource type="Texture2D" uid="uid://c23ic3yvqkhgo" path="res://Assets/sign tile.png" id="1_fmf1u"]
+[ext_resource type="Texture2D" uid="uid://c2d3s17alh8tk" path="res://Assets/largeSign.png" id="1_fmf1u"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_m6mpx"]
-line_spacing = 5.0
-font_size = 25
+line_spacing = 0.0
+font_size = 23
 
 [node name="Sign" type="Control"]
 layout_mode = 3
@@ -15,10 +15,11 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
+visible = false
 
-[node name="SignTile" type="Sprite2D" parent="CanvasLayer"]
+[node name="LargeSign" type="Sprite2D" parent="CanvasLayer"]
 position = Vector2(400, 224)
-scale = Vector2(40, 40)
+scale = Vector2(32, 32)
 texture = ExtResource("1_fmf1u")
 
 [node name="Label" type="Label" parent="CanvasLayer"]
@@ -26,17 +27,14 @@ texture_filter = 2
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 200.0
-offset_top = 143.0
-offset_right = -199.0
-offset_bottom = -104.0
+offset_left = 175.0
+offset_top = 96.0
+offset_right = -177.0
+offset_bottom = -64.0
 grow_horizontal = 2
 grow_vertical = 2
-text = "Yay game
-Yay game
-Yay game
-Yay game
-Yay game"
+text = "/n/n/n4 Hi! :)/n/n/n/n/n9"
 label_settings = SubResource("LabelSettings_m6mpx")
 horizontal_alignment = 1
-vertical_alignment = 1
+paragraph_separator = "/n"
+text_overrun_behavior = 1

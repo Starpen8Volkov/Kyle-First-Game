@@ -23,6 +23,7 @@ var interactable=false
 var startDirection
 var nextMove
 var stoppedScript=false
+var signOnScreen=false
 
 func _physics_process(_delta):
 	pass
@@ -134,9 +135,12 @@ func movePlayerTo(pos):
 	if is_instance_valid(cam):
 		position=pos
 		cam.position=pos
+		if signOnScreen:
+			$Sign/CanvasLayer.visible=false
+			signOnScreen=false
 
 func are_dynamic(body):
-	return Global.dynamic==body
+	return Global.dynamics.has
 
 func interact(area):
 	#print(Global.doors[0].get_cell_source_id((Vector2i((area.global_position-(Global.tileSize/2))/Global.tileSize)))," ",Global.doors[0].get_cell_tile_data((Vector2i((area.global_position-(Global.tileSize/2))/Global.tileSize))).get_custom_data("door"))
@@ -146,9 +150,21 @@ func interact(area):
 		else:
 			Global.door.set_cell(Vector2i((area.global_position-(Global.tileSize/2))/Global.tileSize),1,Vector2i(1,7))
 			position=position
+	
+	if area.get_overlapping_bodies().any(areSign.bind(area)):
+		if signOnScreen:
+			$Sign/CanvasLayer.visible=false
+			signOnScreen=false
+		else:
+			$Sign/CanvasLayer.visible=true
+			$Sign/CanvasLayer/Label.text=Global.signsText[Global.Mapname][str(Vector2i((area.global_position-(Global.tileSize/2))/Global.tileSize))]
+			signOnScreen=true
 
 func areDoor(body,area):
 	return body.get_cell_tile_data((Vector2i((area.global_position-(Global.tileSize/2))/Global.tileSize))).get_custom_data("door")
+	
+func areSign(body,area):
+	return body.get_cell_tile_data((Vector2i((area.global_position-(Global.tileSize/2))/Global.tileSize))).get_custom_data("sign")
 
 func areClosedDoor(body):
 	return Global.door==body

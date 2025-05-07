@@ -13,6 +13,16 @@ var windowSize=Vector2(800,448)
 var main
 var Mapname="map1"
 var changingScenes=false
+var signsText={
+	"map1":{
+		"(8, 13)":"/n/n/n4 Hi! :)/n/n/n/n/n",
+		"(0, 0)":"/n/n/nCorner Sign/n/n/n/n/n",
+		"(24, 23)":"/n/nLeft Path - House 1/n/nUp path - House 2/n/nRight Path - Castle/n/n",
+		"(38, 7)":"/n/n/n/nHouse 2/n/n/n/n",
+		"(41, 24)":"/n/n/n/nCastle/n/n/n/n"
+	}
+}
+var dynamics
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -62,6 +72,7 @@ func loadmap(m,l):
 	tileSize = Vector2(tileMap.tile_set.tile_size)
 	solids = get_tree().get_nodes_in_group("solid")
 	dynamic = get_tree().get_nodes_in_group("dynamic layer")[-1]
+	dynamics = get_tree().get_nodes_in_group("dynamic")
 	door = get_tree().get_nodes_in_group("door")[-1]
 	changingScenes=false
 	#generateKeys(15)

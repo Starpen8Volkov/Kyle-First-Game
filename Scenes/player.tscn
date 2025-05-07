@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://bjv117g4u3uxn"]
+[gd_scene load_steps=7 format=3 uid="uid://bjv117g4u3uxn"]
 
 [ext_resource type="Script" uid="uid://t8hkijt1fwsf" path="res://Scripts/player.gd" id="1_cvnsp"]
 [ext_resource type="SpriteFrames" uid="uid://c4ukbjfnk438o" path="res://Assets/Spriteframes/player_frames.tres" id="2_jkj8r"]
 [ext_resource type="PackedScene" uid="uid://biqipiftf7elw" path="res://Scenes/Dynamic Notification.tscn" id="3_6t5aa"]
+[ext_resource type="PackedScene" uid="uid://20l7kqs32maf" path="res://Scenes/sign.tscn" id="4_vgqql"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_am3h0"]
 size = Vector2(155, 155)
@@ -76,5 +77,7 @@ shape = SubResource("RectangleShape2D_8mqnw")
 [node name="ButtonE" parent="." instance=ExtResource("3_6t5aa")]
 position = Vector2(0, -160)
 scale = Vector2(5, 5)
+
+[node name="Sign" parent="." instance=ExtResource("4_vgqql")]
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
