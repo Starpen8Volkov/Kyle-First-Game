@@ -24,6 +24,7 @@ var startDirection
 var nextMove
 var stoppedScript=false
 var signOnScreen=false
+var dynamics=[]
 
 func _physics_process(_delta):
 	pass
@@ -78,7 +79,8 @@ func _process(_delta):
 				toMove=Vector2(0,(Global.tileSize.y)*directionY)
 		
 		#interactables
-		if collisionAreas[lastDir].get_overlapping_bodies().any(are_dynamic):
+		dynamics=[]
+		if collisionAreas[lastDir].get_overlapping_bodies().any(are_dynamic.bind(collisionAreas[lastDir])):
 			$ButtonE.position=Tiledirections[lastDir]*10
 			$ButtonE.start(true)
 			interactable=true
@@ -91,7 +93,8 @@ func _process(_delta):
 		#teleport
 		if collisionAreas["middle"].get_overlapping_bodies().any(are_open_door.bind(collisionAreas["middle"])):
 			stopscript()
-			Global.loadmap(get_door_location(Global.dynamic,collisionAreas["middle"]),true)
+			var tileData=get_door_location(Global.dynamic,collisionAreas["middle"])
+			Global.loadmap(true, tileData[0], tileData[1], tileData[2])
 		
 		#position update
 		if nextMove!=null:
@@ -139,19 +142,23 @@ func movePlayerTo(pos):
 			$Sign/CanvasLayer.visible=false
 			signOnScreen=false
 
-func are_dynamic(body):
-	return Global.dynamics.has
+func are_dynamic(body, area):
+	if body!=null and Global.dynamics.has(body):
+		var tile=body.get_cell_tile_data((Vector2i((area.global_position-(Global.tileSize/2))/Global.tileSize)))
+		dynamics.append(tile)
+		print(tile, body, Vector2i((area.global_position-(Global.tileSize/2))/Global.tileSize))
+		return true
+	return false
 
 func interact(area):
-	#print(Global.doors[0].get_cell_source_id((Vector2i((area.global_position-(Global.tileSize/2))/Global.tileSize)))," ",Global.doors[0].get_cell_tile_data((Vector2i((area.global_position-(Global.tileSize/2))/Global.tileSize))).get_custom_data("door"))
-	if area.get_overlapping_bodies().any(areDoor.bind(area)):
+	if dynamics.any(areDoor):
 		if area.get_overlapping_bodies().any(areClosedDoor):
 			Global.door.erase_cell(Vector2i((area.global_position-(Global.tileSize/2))/Global.tileSize))
 		else:
 			Global.door.set_cell(Vector2i((area.global_position-(Global.tileSize/2))/Global.tileSize),1,Vector2i(1,7))
 			position=position
 	
-	if area.get_overlapping_bodies().any(areSign.bind(area)):
+	if dynamics.any(areSign):
 		if signOnScreen:
 			$Sign/CanvasLayer.visible=false
 			signOnScreen=false
@@ -160,11 +167,12 @@ func interact(area):
 			$Sign/CanvasLayer/Label.text=Global.signsText[Global.Mapname][str(Vector2i((area.global_position-(Global.tileSize/2))/Global.tileSize))]
 			signOnScreen=true
 
-func areDoor(body,area):
-	return body.get_cell_tile_data((Vector2i((area.global_position-(Global.tileSize/2))/Global.tileSize))).get_custom_data("door")
+func areDoor(tile):
+	print(tile, dynamics)
+	return tile.get_custom_data("door")
 	
-func areSign(body,area):
-	return body.get_cell_tile_data((Vector2i((area.global_position-(Global.tileSize/2))/Global.tileSize))).get_custom_data("sign")
+func areSign(tile):
+	return tile.get_custom_data("sign")
 
 func areClosedDoor(body):
 	return Global.door==body
@@ -179,7 +187,7 @@ func get_door_location(body,area):
 	var cellData=body.get_cell_tile_data(Vector2i((area.global_position-(Global.tileSize/2))/Global.tileSize))
 	if body==null or cellData==null:
 		return false
-	return cellData.get_custom_data("location")
+	return [cellData.get_custom_data("location"), cellData.get_custom_data("player_pos"), cellData.get_custom_data("player_dir")]
 
 func stopscript():
 	$Timer.stop()

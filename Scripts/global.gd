@@ -26,7 +26,7 @@ var dynamics
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	loadmap(Mapname,true)
+	loadmap(true, Mapname)
 	pass
 
 
@@ -54,12 +54,12 @@ func chooseRandomTile(node):
 	node.position = ((Vector2(randi_range(0+borderSize,windowSize.x-borderSize),randi_range(0+borderSize,windowSize.y-borderSize))/Global.tileSize).round()*Global.tileSize)+(Global.tileSize/2)
 
 
-func loadmap(m,l):
+func loadmap(l, map, pos=null, dir=null):
 	changingScenes=true
 	main=get_tree().get_first_node_in_group("Main")
 	if l:
 		#get_tree().change_scene_to_file("res://Scenes/map"+str(m)+".tscn")
-		var newMap=load("res://Scenes/"+str(m)+".tscn")
+		var newMap=load("res://Scenes/"+str(map)+".tscn")
 		newMap=newMap.instantiate()
 		if main.get_node("Map").get_child_count()>0:
 			deleteOldmap()
@@ -74,6 +74,11 @@ func loadmap(m,l):
 	dynamic = get_tree().get_nodes_in_group("dynamic layer")[-1]
 	dynamics = get_tree().get_nodes_in_group("dynamic")
 	door = get_tree().get_nodes_in_group("door")[-1]
+	
+	if pos!=null:
+		Player.global_position=pos
+	if dir!=null:
+		Player.update_sprite(dir)
 	changingScenes=false
 	#generateKeys(15)
 

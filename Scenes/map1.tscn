@@ -45,7 +45,7 @@ use_parent_material = true
 tile_map_data = PackedByteArray("AAAIAA0AAQALAAYAAAAAAAAAAQALAAYAAAAmAAcAAQALAAYAAAAYABcAAQALAAYAAAApABgAAQALAAYAAAA=")
 tile_set = ExtResource("1_3vq46")
 
-[node name="doors" type="TileMapLayer" parent="TileMap" groups=["door", "dynamic", "solid"]]
+[node name="doors" type="TileMapLayer" parent="TileMap" groups=["door", "solid"]]
 z_index = -2
 use_parent_material = true
 tile_map_data = PackedByteArray("AAAJAAsAAQABAAcAAAAlAAUAAQABAAcAAAA=")
@@ -68,7 +68,7 @@ use_parent_material = true
 tile_set = ExtResource("1_3vq46")
 
 [node name="Player" parent="." instance=ExtResource("2_cc8cj")]
-position = Vector2(391, 343)
+position = Vector2(163, 210)
 metadata/Direction = "down"
 
 [node name="Key" parent="." instance=ExtResource("3_me8s6")]

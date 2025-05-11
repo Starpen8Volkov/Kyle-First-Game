@@ -33,10 +33,10 @@ tile_set = ExtResource("1_xebma")
 [node name="Interactables" type="TileMapLayer" parent="TileMap" groups=["dynamic", "dynamic layer"]]
 z_index = -2
 use_parent_material = true
-tile_map_data = PackedByteArray("AAAIAAgAAgABAAAAAAA=")
+tile_map_data = PackedByteArray("AAAIAAgAAgABAAAAAAAIAAMAAgAAAAAAAAA=")
 tile_set = ExtResource("1_xebma")
 
-[node name="doors" type="TileMapLayer" parent="TileMap" groups=["door", "dynamic", "solid"]]
+[node name="doors" type="TileMapLayer" parent="TileMap" groups=["door", "solid"]]
 z_index = -2
 use_parent_material = true
 tile_set = ExtResource("1_xebma")
