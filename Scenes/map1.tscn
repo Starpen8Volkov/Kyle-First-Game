@@ -36,7 +36,7 @@ tile_set = ExtResource("1_3vq46")
 [node name="Interactables" type="TileMapLayer" parent="TileMap" groups=["dynamic", "dynamic layer"]]
 z_index = -2
 use_parent_material = true
-tile_map_data = PackedByteArray("AAAJAAsAAgAAAAAAAAAlAAUAAQACAAYAAAA=")
+tile_map_data = PackedByteArray("AAAlAAUAAQACAAYAAAAJAAsAAgAAAAAAAAA=")
 tile_set = ExtResource("1_3vq46")
 
 [node name="Solid Interactables" type="TileMapLayer" parent="TileMap" groups=["dynamic", "solid"]]

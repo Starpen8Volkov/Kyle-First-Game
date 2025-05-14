@@ -48,8 +48,7 @@ func reload():
 	}
 	startDirection=get_meta("Direction")
 	
-	position = ((position/Global.tileSize).round()*Global.tileSize)+(Global.tileSize/2)
-	cam.position=position
+	resetPosition()
 	
 	sprite.play(startDirection)
 
@@ -146,7 +145,6 @@ func are_dynamic(body, area):
 	if body!=null and Global.dynamics.has(body):
 		var tile=body.get_cell_tile_data((Vector2i((area.global_position-(Global.tileSize/2))/Global.tileSize)))
 		dynamics.append(tile)
-		print(tile, body, Vector2i((area.global_position-(Global.tileSize/2))/Global.tileSize))
 		return true
 	return false
 
@@ -168,11 +166,14 @@ func interact(area):
 			signOnScreen=true
 
 func areDoor(tile):
-	print(tile, dynamics)
-	return tile.get_custom_data("door")
+	if tile!=null:
+		return tile.get_custom_data("door")
+	return false 
 	
 func areSign(tile):
-	return tile.get_custom_data("sign")
+	if tile!=null:
+		return tile.get_custom_data("sign")
+	return false
 
 func areClosedDoor(body):
 	return Global.door==body
@@ -199,3 +200,7 @@ func update_sprite(s):
 			sprite.stop()
 		else:
 			sprite.play(s)
+
+func resetPosition():
+	position = ((position/Global.tileSize).round()*Global.tileSize)-(Global.tileSize/2)
+	cam.position=position

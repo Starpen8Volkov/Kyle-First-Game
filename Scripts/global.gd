@@ -59,6 +59,7 @@ func loadmap(l, map, pos=null, dir=null):
 	main=get_tree().get_first_node_in_group("Main")
 	if l:
 		#get_tree().change_scene_to_file("res://Scenes/map"+str(m)+".tscn")
+		Mapname=map
 		var newMap=load("res://Scenes/"+str(map)+".tscn")
 		newMap=newMap.instantiate()
 		if main.get_node("Map").get_child_count()>0:
@@ -76,7 +77,8 @@ func loadmap(l, map, pos=null, dir=null):
 	door = get_tree().get_nodes_in_group("door")[-1]
 	
 	if pos!=null:
-		Player.global_position=pos
+		Player.position=pos
+		Player.resetPosition()
 	if dir!=null:
 		Player.update_sprite(dir)
 	changingScenes=false
