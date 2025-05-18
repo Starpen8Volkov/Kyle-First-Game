@@ -22,6 +22,11 @@ var signsText={
 		"(41, 24)":"/n/n/n/nCastle/n/n/n/n"
 	}
 }
+var moneybagItems={
+	"map1":{
+		"(4, 14)":{"(3, 14)":"key", "(5, 14)":"key", "(4, 13)":"key", "(4, 15)":"key"}
+	}
+}
 var dynamics
 
 # Called when the node enters the scene tree for the first time.

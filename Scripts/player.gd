@@ -164,6 +164,10 @@ func interact(area):
 			$Sign/CanvasLayer.visible=true
 			$Sign/CanvasLayer/Label.text=Global.signsText[Global.Mapname][str(Vector2i((area.global_position-(Global.tileSize/2))/Global.tileSize))]
 			signOnScreen=true
+	
+	if dynamics.any(areMoneybag):
+		for item in Global.moneybagItems[Global.Mapname][str(Vector2i((area.global_position-(Global.tileSize/2))/Global.tileSize))]:
+			print(item)
 
 func areDoor(tile):
 	if tile!=null:
@@ -204,3 +208,8 @@ func update_sprite(s):
 func resetPosition():
 	position = ((position/Global.tileSize).round()*Global.tileSize)-(Global.tileSize/2)
 	cam.position=position
+
+func areMoneybag(tile):
+	if tile!=null:
+		return tile.get_custom_data("moneybag")
+	return false 

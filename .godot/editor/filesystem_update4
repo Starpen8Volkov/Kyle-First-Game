@@ -8,5 +8,6 @@ res://Scenes/Dynamic Notification.tscn
 res://Scenes/map1.tscn
 res://Scenes/level template.tscn
 res://Scenes/sign.tscn
-res://Scripts/player.gd
+res://Scripts/key.gd
 res://Scripts/global.gd
+res://Scripts/player.gd
