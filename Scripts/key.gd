@@ -1,17 +1,8 @@
 extends Area2D
 
-
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	#position.x = randi_range(20,780)
-	#position.y = randi_range(20,430)
-	pass
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(_delta):
-	pass
-
+var speed=1.2
+var rot_speed=1.2
+var final_rot=1080
 
 func _on_body_entered(body):
 	if body.is_in_group("player"):
@@ -26,3 +17,15 @@ func delete():
 
 func _on_timer_timeout() -> void:
 	queue_free()
+
+func enter(bag, pos):
+	$CollisionPolygon2D.disabled=true
+	global_position=(Vector2(bag)*Global.tileSize)+(Global.tileSize/2)
+	var tween=create_tween()
+	tween.tween_property(self, "global_position", (Vector2(pos)*Global.tileSize)+(Global.tileSize/2), speed)
+	tween.tween_callback(entered)
+	var tween2=create_tween()
+	tween2.tween_property($Sprite2D, "rotation_degrees", final_rot, rot_speed)
+
+func entered():
+	$CollisionPolygon2D.disabled=false

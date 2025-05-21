@@ -166,8 +166,16 @@ func interact(area):
 			signOnScreen=true
 	
 	if dynamics.any(areMoneybag):
-		for item in Global.moneybagItems[Global.Mapname][str(Vector2i((area.global_position-(Global.tileSize/2))/Global.tileSize))]:
-			print(item)
+		var p=Vector2i((area.global_position-(Global.tileSize/2))/Global.tileSize)
+		for item in Global.moneybagItems[Global.Mapname][str(p)]:
+			var new_item=Global.collectables[Global.moneybagItems[Global.Mapname][str(p)][item]].instantiate()
+			Global.Map.add_child(new_item)
+			item=item.lstrip("(")
+			item=item.rstrip(")")
+			item=item.split(", ")
+			item=Vector2(int(item[0]), int(item[1]))
+			new_item.enter(p, item)
+		Global.solid_dynamic.erase_cell(Vector2i((area.global_position-(Global.tileSize/2))/Global.tileSize))
 
 func areDoor(tile):
 	if tile!=null:

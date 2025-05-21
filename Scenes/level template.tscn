@@ -7,7 +7,6 @@
 
 [node name="TileMap" type="Node2D" parent="."]
 position = Vector2(1.52588e-05, 1.52588e-05)
-scale = Vector2(1, 1)
 
 [node name="background" type="TileMapLayer" parent="TileMap" groups=["tilemap"]]
 z_index = -5
@@ -35,7 +34,7 @@ z_index = -2
 use_parent_material = true
 tile_set = ExtResource("1_y7x70")
 
-[node name="Solid Interactables" type="TileMapLayer" parent="TileMap" groups=["dynamic", "solid"]]
+[node name="Solid Interactables" type="TileMapLayer" parent="TileMap" groups=["dynamic", "solid", "solid_dynamic"]]
 z_index = -2
 use_parent_material = true
 tile_set = ExtResource("1_y7x70")

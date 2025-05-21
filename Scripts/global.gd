@@ -28,9 +28,15 @@ var moneybagItems={
 	}
 }
 var dynamics
+var collectables={}
+var Map
+var solid_dynamic
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	collectables={
+		"key": preload("res://Scenes/key.tscn")
+	}
 	loadmap(true, Mapname)
 	pass
 
@@ -71,8 +77,7 @@ func loadmap(l, map, pos=null, dir=null):
 			deleteOldmap()
 		main.get_node("Map").add_child(newMap)
 	
-	#if Player!=null:
-		#Player.reload()
+	Map=get_tree().get_nodes_in_group("map")[-1]
 	Player=get_tree().get_nodes_in_group("player")[-1]
 	tileMap = get_tree().get_nodes_in_group("tilemap")[-1]
 	tileSize = Vector2(tileMap.tile_set.tile_size)
@@ -80,6 +85,7 @@ func loadmap(l, map, pos=null, dir=null):
 	dynamic = get_tree().get_nodes_in_group("dynamic layer")[-1]
 	dynamics = get_tree().get_nodes_in_group("dynamic")
 	door = get_tree().get_nodes_in_group("door")[-1]
+	solid_dynamic = get_tree().get_nodes_in_group("solid_dynamic")[-1]
 	
 	if pos!=null:
 		Player.position=pos
