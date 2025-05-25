@@ -1,0 +1,14 @@
+[gd_resource type="SpriteFrames" load_steps=2 format=3 uid="uid://ceaxapquj3vdl"]
+
+[ext_resource type="Texture2D" uid="uid://cs6e8wbhtmjh6" path="res://Assets/NPCs/Jeff.png" id="1_mb6eo"]
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_mb6eo")
+}],
+"loop": true,
+"name": &"Jeff",
+"speed": 5.0
+}]

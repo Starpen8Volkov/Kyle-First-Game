@@ -176,6 +176,12 @@ func interact(area):
 			item=Vector2(int(item[0]), int(item[1]))
 			new_item.enter(p, item)
 		Global.solid_dynamic.erase_cell(Vector2i((area.global_position-(Global.tileSize/2))/Global.tileSize))
+	
+	if dynamics.any(areNPC):
+		if Global.in_dialogue:
+			pass
+		Global.in_dialogue=!Global.in_dialogue
+		Global.npc_face.play(dynamics[0].get_custom_data("npc_name"))
 
 func areDoor(tile):
 	if tile!=null:
@@ -221,3 +227,8 @@ func areMoneybag(tile):
 	if tile!=null:
 		return tile.get_custom_data("moneybag")
 	return false 
+
+func areNPC(tile):
+	if tile!=null:
+		return tile.get_custom_data("npc")
+	return false

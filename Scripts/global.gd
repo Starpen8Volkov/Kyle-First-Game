@@ -31,6 +31,8 @@ var dynamics
 var collectables={}
 var Map
 var solid_dynamic
+var npc_face
+var in_dialogue=false
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -86,6 +88,7 @@ func loadmap(l, map, pos=null, dir=null):
 	dynamics = get_tree().get_nodes_in_group("dynamic")
 	door = get_tree().get_nodes_in_group("door")[-1]
 	solid_dynamic = get_tree().get_nodes_in_group("solid_dynamic")[-1]
+	npc_face = get_tree().get_first_node_in_group("npc_face")
 	
 	if pos!=null:
 		Player.position=pos

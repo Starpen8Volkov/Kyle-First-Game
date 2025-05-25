@@ -1,4 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://ddgevhewlju2f"]
+[gd_scene load_steps=4 format=3 uid="uid://ddgevhewlju2f"]
+
+[ext_resource type="Texture2D" uid="uid://dent3jv8hfurt" path="res://Assets/dialogue_box.png" id="1_o2wgm"]
+[ext_resource type="SpriteFrames" uid="uid://ceaxapquj3vdl" path="res://Assets/Spriteframes/npc_faces.tres" id="2_o2wgm"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_jrl71"]
 font_size = 40
@@ -13,6 +16,19 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="DialogueBox" type="Sprite2D" parent="CanvasLayer"]
+texture_filter = 1
+position = Vector2(400, 384)
+scale = Vector2(8, 8)
+texture = ExtResource("1_o2wgm")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CanvasLayer/DialogueBox" groups=["npc_face"]]
+position = Vector2(-41, 0)
+scale = Vector2(0.75, 0.75)
+sprite_frames = ExtResource("2_o2wgm")
+animation = &"Jeff"
+autoplay = "Jeff"
 
 [node name="Score" type="Label" parent="CanvasLayer" groups=["score"]]
 texture_filter = 2
