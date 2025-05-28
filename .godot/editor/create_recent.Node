@@ -1,8 +1,8 @@
+Label
 AnimatedSprite2D
 Sprite2D
 Timer
 AnimationPlayer
-Label
 CanvasLayer
 Node2D
 ColorRect

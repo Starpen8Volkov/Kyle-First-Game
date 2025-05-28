@@ -25,6 +25,8 @@ var nextMove
 var stoppedScript=false
 var signOnScreen=false
 var dynamics=[]
+var pausedmovement=false
+var npc
 
 func _physics_process(_delta):
 	pass
@@ -61,21 +63,31 @@ func _process(_delta):
 		var directionX = Input.get_axis("Player_Left","Player_Right")
 		var directionY = Input.get_axis("Player_Up","Player_Down")
 		
-		if Input.is_action_just_pressed("Player_Up"):
-			lastDir="top"
-		if Input.is_action_just_pressed("Player_Right"):
-			lastDir="right"
-		if Input.is_action_just_pressed("Player_Down"):
-			lastDir="bottom"
-		if Input.is_action_just_pressed("Player_Left"):
-			lastDir="left"
-		
-		if directionX!=null && toMove.x==0:
-			if lastDir=="left" or lastDir=="right":
-				toMove=Vector2((Global.tileSize.x)*directionX,0)
-		if directionY!=null && toMove.y==0:
-			if lastDir=="top" or lastDir=="bottom":
-				toMove=Vector2(0,(Global.tileSize.y)*directionY)
+		if !pausedmovement:
+			if Input.is_action_just_pressed("Player_Up"):
+				lastDir="top"
+			if Input.is_action_just_pressed("Player_Right"):
+				lastDir="right"
+			if Input.is_action_just_pressed("Player_Down"):
+				lastDir="bottom"
+			if Input.is_action_just_pressed("Player_Left"):
+				lastDir="left"
+			
+			if directionX!=null && toMove.x==0:
+				if lastDir=="left" or lastDir=="right":
+					toMove=Vector2((Global.tileSize.x)*directionX,0)
+			if directionY!=null && toMove.y==0:
+				if lastDir=="top" or lastDir=="bottom":
+					toMove=Vector2(0,(Global.tileSize.y)*directionY)
+		else:
+			if Input.is_action_just_pressed("Player_Right") or Input.is_action_just_pressed("Player_Down"):
+				if npc.get_custom_data("npc_say")<Global.npcdialogues[npc.get_custom_data("npc_name")].size()-1:
+					npc.set_custom_data("npc_say",npc.get_custom_data("npc_say")+1)
+					update_dialogue(npc)
+			if Input.is_action_just_pressed("Player_Left") or Input.is_action_just_pressed("Player_Up"):
+				if npc.get_custom_data("npc_say")>0:
+					npc.set_custom_data("npc_say",npc.get_custom_data("npc_say")-1)
+					update_dialogue(npc)
 		
 		#interactables
 		dynamics=[]
@@ -178,10 +190,11 @@ func interact(area):
 		Global.solid_dynamic.erase_cell(Vector2i((area.global_position-(Global.tileSize/2))/Global.tileSize))
 	
 	if dynamics.any(areNPC):
-		if Global.in_dialogue:
-			pass
 		Global.in_dialogue=!Global.in_dialogue
-		Global.npc_face.play(dynamics[0].get_custom_data("npc_name"))
+		Global.npc_face.get_parent().visible=Global.in_dialogue
+		pausedmovement=Global.in_dialogue
+		if Global.in_dialogue:
+			update_dialogue(dynamics[0])
 
 func areDoor(tile):
 	if tile!=null:
@@ -232,3 +245,8 @@ func areNPC(tile):
 	if tile!=null:
 		return tile.get_custom_data("npc")
 	return false
+
+func update_dialogue(n):
+	npc=n
+	Global.npc_face.play(npc.get_custom_data("npc_name"))
+	Global.npc_text.text=Global.npcdialogues[npc.get_custom_data("npc_name")][npc.get_custom_data("npc_say")]
