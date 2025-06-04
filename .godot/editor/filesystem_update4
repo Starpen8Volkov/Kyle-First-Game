@@ -6,4 +6,5 @@ res://Scenes/map1.tscn
 res://Scenes/key.tscn
 res://Scenes/main_game_window.tscn
 res://Scripts/player.gd
-res://Scripts/global.gd
+res://Scripts/npc.gd
+res://Scenes/npc_nav.tscn

@@ -250,3 +250,4 @@ func update_dialogue(n):
 	npc=n
 	Global.npc_face.play(npc.get_custom_data("npc_name"))
 	Global.npc_text.text=Global.npcdialogues[npc.get_custom_data("npc_name")][npc.get_custom_data("npc_say")]
+	resetPosition()

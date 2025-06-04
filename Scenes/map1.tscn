@@ -1,8 +1,15 @@
-[gd_scene load_steps=4 format=4 uid="uid://riuk4wx6g86t"]
+[gd_scene load_steps=6 format=4 uid="uid://riuk4wx6g86t"]
 
 [ext_resource type="TileSet" uid="uid://bfngyo5hq7mo6" path="res://Assets/Tilesets/overworld.tres" id="1_3vq46"]
 [ext_resource type="PackedScene" uid="uid://bjv117g4u3uxn" path="res://Scenes/player.tscn" id="2_cc8cj"]
+[ext_resource type="PackedScene" uid="uid://gdbtte4q0cl7" path="res://Scenes/npc_nav.tscn" id="2_xgpx1"]
 [ext_resource type="PackedScene" uid="uid://bmxkv86wfa20s" path="res://Scenes/key.tscn" id="3_me8s6"]
+
+[sub_resource type="Curve2D" id="Curve2D_xgpx1"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 96, 176, 0, 0, 0, 0, 100, 233, 0, 0, 0, 0, 154, 257, 0, 0, 0, 0, 184, 209, 0, 0, 0, 0, 185.046, 196.019, 0, 0, 0, 0, 185, 183)
+}
+point_count = 6
 
 [node name="Map 1" type="Node2D" groups=["map"]]
 
@@ -66,6 +73,18 @@ y_sort_origin = -1
 z_index = 1
 use_parent_material = true
 tile_set = ExtResource("1_3vq46")
+
+[node name="Path2D" type="Path2D" parent="TileMap"]
+curve = SubResource("Curve2D_xgpx1")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="TileMap/Path2D"]
+position = Vector2(96, 176)
+rotation = 1.50074
+loop = false
+
+[node name="NPC Nav" parent="TileMap/Path2D/PathFollow2D" instance=ExtResource("2_xgpx1")]
+rotation = -1.50074
+scale = Vector2(1, 1)
 
 [node name="Player" parent="." instance=ExtResource("2_cc8cj")]
 position = Vector2(163, 210)

@@ -1,3 +1,10 @@
+PathFollow2D
+Path2D
+Area2D
+ColorRect
+NavigationObstacle2D
+NavigationRegion2D
+NavigationAgent2D
 Label
 AnimatedSprite2D
 Sprite2D
@@ -5,5 +12,3 @@ Timer
 AnimationPlayer
 CanvasLayer
 Node2D
-ColorRect
-NavigationRegion2D

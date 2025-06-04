@@ -1,5 +1,5 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1748425191
+::res://::1749029223
 export_presets.cfg::TextFile/TextFile::-1::1744363646::0::1::::<><><>0<>0<><>::
 icon.svg::CompressedTexture2D/CompressedTexture2D::1645368062317874776::1743151221::1743151221::1::::<><><>0<>0<>bd45657a9432b8db1fe003a1354a9540<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
 README.md::TextFile/TextFile::-1::1743151221::0::1::::<><><>0<>0<><>::
@@ -9,37 +9,37 @@ largeSign.png::CompressedTexture2D/CompressedTexture2D::6675866914018863612::174
 pixil-frame-0.png::CompressedTexture2D/CompressedTexture2D::4899033347812333834::1744195427::1744195482::1::::<><><>0<>0<>ce84aa87cac8404c0567a4ec9dfb8d4b<>res://.godot/imported/pixil-frame-0.png-1e2e14a6fca0ab207413f8785ae4b7df.ctex::
 sign tile.png::CompressedTexture2D/CompressedTexture2D::6726233538961728358::1743151221::1746354372::1::::<><><>0<>0<>01715511472ad0cea4f52ee8c64d1275<>res://.godot/imported/sign tile.png-40e3b4bff8dc703db1e99a128436c46d.ctex::
 ::res://Assets/Fonts/::1748427009
-::res://Assets/Fonts/depixel/::1748427010
-DePixelBreit.otf::FontFile::3392558292928749420::1439291264::1748427073::1::::<><><>0<>0<>2f94e078f438b0f00bbcd3bcbe8a9764<>res://.godot/imported/DePixelBreit.otf-382139c6cdd7c1098e795818f0e1c942.fontdata::
-DePixelBreit.ttf::FontFile::263006863725655100::1439291328::1748427073::1::::<><><>0<>0<>bdb9720edd1da8196a1b80fed4c8043f<>res://.godot/imported/DePixelBreit.ttf-6a646f40f7fc22d33e222079e6a77eff.fontdata::
-depixelbreit.woff::FontFile::1172427386959893745::1484213054::1748427073::1::::<><><>0<>0<>3ec916227858d1d83b39ab787dae688b<>res://.godot/imported/depixelbreit.woff-c43a3a8302ee9ffcb3c866238b7beeda.fontdata::
-depixelbreit.woff2::FontFile::4083472649878723427::1484213054::1748427073::1::::<><><>0<>0<>4f928bd4710b48da68c16bf4ae139cb8<>res://.godot/imported/depixelbreit.woff2-2a3d4e1e69524d58d4bf3753029d864f.fontdata::
-DePixelBreitFett.otf::FontFile::743725139279414096::1439291262::1748427073::1::::<><><>0<>0<>7a8043c666f821aa4fc84f4604e19f09<>res://.godot/imported/DePixelBreitFett.otf-ae3512d9ddc7a7832f104d093063965a.fontdata::
-DePixelBreitFett.ttf::FontFile::1189216371074822277::1439291326::1748427073::1::::<><><>0<>0<>9ead066d7bfec4dae113c42f0c531982<>res://.godot/imported/DePixelBreitFett.ttf-922c8facc95b55f3d664aaae5ee37583.fontdata::
-depixelbreitfett.woff::FontFile::2761644544189934915::1484213054::1748427073::1::::<><><>0<>0<>30496f4e0293e87018323c1411fe5c43<>res://.godot/imported/depixelbreitfett.woff-4a918b957779351bea6f04cd7ea84994.fontdata::
-depixelbreitfett.woff2::FontFile::1158251554252630547::1484213054::1748427073::1::::<><><>0<>0<>144973138c2e2b23c758fc3153a958e8<>res://.godot/imported/depixelbreitfett.woff2-fc4dc5b759926af723e89f461eaf5497.fontdata::
-DePixelHalbfett.otf::FontFile::4317339836094584887::1439291262::1748427073::1::::<><><>0<>0<>559c39c8d3338658480c0f02af8fd944<>res://.godot/imported/DePixelHalbfett.otf-0bdb10c2ac8c9361019530726f400890.fontdata::
-DePixelHalbfett.ttf::FontFile::7945939377600699794::1439291326::1748427073::1::::<><><>0<>0<>ca237adcf3cb8bf3baedad202581fe4d<>res://.godot/imported/DePixelHalbfett.ttf-90e37a9d7581e78a5c3c9748032e67c9.fontdata::
-depixelhalbfett.woff::FontFile::2489389090510468812::1484213054::1748427073::1::::<><><>0<>0<>509ea502c3d5a634913b6e2d085b20ee<>res://.godot/imported/depixelhalbfett.woff-2e3fcf3c316b0e8276c0480bb98464b1.fontdata::
-depixelhalbfett.woff2::FontFile::3073773305215998051::1484213054::1748427073::1::::<><><>0<>0<>0855a368d8b012eecd317d90d360c363<>res://.godot/imported/depixelhalbfett.woff2-720c114696b1f149717e46e99399995f.fontdata::
-DePixelIllegible.otf::FontFile::2899448329448144142::1439291260::1748427073::1::::<><><>0<>0<>8c09c57f402c9cbbb4e00f1bd389f3e7<>res://.godot/imported/DePixelIllegible.otf-d98c62a3e77968e9cd2833d710af441c.fontdata::
-DePixelIllegible.ttf::FontFile::8212256070819674241::1439291324::1748427073::1::::<><><>0<>0<>679fbd6324f7fc319f418f2125460f9e<>res://.godot/imported/DePixelIllegible.ttf-0569592493d984a0a4385e4ec15cb327.fontdata::
-depixelillegible.woff::FontFile::8966224508426176562::1484213054::1748427073::1::::<><><>0<>0<>01129633ca19b52cc9f68cdd30e6f89b<>res://.godot/imported/depixelillegible.woff-6368908c91f0a2dfaf354b386fd87bdf.fontdata::
-depixelillegible.woff2::FontFile::9177028785631440713::1484213054::1748427073::1::::<><><>0<>0<>c6a40012dbf49372f25ae177bf66f0a6<>res://.godot/imported/depixelillegible.woff2-b1a5aedddc992504a0e1aa6fa68b9cbc.fontdata::
-DePixelKlein.otf::FontFile::9157052163976271325::1439291258::1748427073::1::::<><><>0<>0<>cdd9e2ce983a347445f59a8f4ba59b2e<>res://.godot/imported/DePixelKlein.otf-7b5078506bb793eb516f12185354d28f.fontdata::
-DePixelKlein.ttf::FontFile::2316784062131907941::1439291322::1748427073::1::::<><><>0<>0<>a1bea36fafb49251c013224c041c5307<>res://.godot/imported/DePixelKlein.ttf-d01cc5bf269fe0ca03d5b5e15c8ffbae.fontdata::
-depixelklein.woff::FontFile::2532990867046694880::1484213054::1748427073::1::::<><><>0<>0<>a1ef7c6a1fd3d9225642c2447be70129<>res://.godot/imported/depixelklein.woff-cad91956a138df860abec23b324f14b2.fontdata::
-depixelklein.woff2::FontFile::5543141302081977503::1484213054::1748427073::1::::<><><>0<>0<>85f82a33ddc557f63d9a46be0d986b40<>res://.godot/imported/depixelklein.woff2-8a388fb6d547bf02a9f5dd1f9b0a4bf5.fontdata::
-DePixelSchmal.otf::FontFile::5490004572688743348::1439291258::1748427073::1::::<><><>0<>0<>afa927fb615b224556dfd80f73db4989<>res://.godot/imported/DePixelSchmal.otf-b3aa07ac5793d72f37234a60ab697da4.fontdata::
-DePixelSchmal.ttf::FontFile::3237621389026432591::1439291324::1748427073::1::::<><><>0<>0<>b411d0f58f11b80960c1a80645328bf1<>res://.godot/imported/DePixelSchmal.ttf-aa56d5cd7118c8ba4123be0923ad21be.fontdata::
-depixelschmal.woff::FontFile::303143465056526326::1484213054::1748427073::1::::<><><>0<>0<>d813e6158c0ebc6c56489da3be5d81b2<>res://.godot/imported/depixelschmal.woff-36c9891c6bad31215b69fa0ce8801be4.fontdata::
-depixelschmal.woff2::FontFile::3752377342634080916::1484213054::1748427073::1::::<><><>0<>0<>f4b0e91e2cc3f9a31a16004cd638b7e3<>res://.godot/imported/depixelschmal.woff2-99b3a36b3492736a059a3512792dff73.fontdata::
+::res://Assets/Fonts/depixel/::1748427073
+DePixelBreit.otf::FontFile/FontFile::3392558292928749420::1439291264::1748427073::1::::<><><>0<>0<>2f94e078f438b0f00bbcd3bcbe8a9764<>res://.godot/imported/DePixelBreit.otf-382139c6cdd7c1098e795818f0e1c942.fontdata::
+DePixelBreit.ttf::FontFile/FontFile::263006863725655100::1439291328::1748427073::1::::<><><>0<>0<>bdb9720edd1da8196a1b80fed4c8043f<>res://.godot/imported/DePixelBreit.ttf-6a646f40f7fc22d33e222079e6a77eff.fontdata::
+depixelbreit.woff::FontFile/FontFile::1172427386959893745::1484213054::1748427073::1::::<><><>0<>0<>3ec916227858d1d83b39ab787dae688b<>res://.godot/imported/depixelbreit.woff-c43a3a8302ee9ffcb3c866238b7beeda.fontdata::
+depixelbreit.woff2::FontFile/FontFile::4083472649878723427::1484213054::1748427073::1::::<><><>0<>0<>4f928bd4710b48da68c16bf4ae139cb8<>res://.godot/imported/depixelbreit.woff2-2a3d4e1e69524d58d4bf3753029d864f.fontdata::
+DePixelBreitFett.otf::FontFile/FontFile::743725139279414096::1439291262::1748427073::1::::<><><>0<>0<>7a8043c666f821aa4fc84f4604e19f09<>res://.godot/imported/DePixelBreitFett.otf-ae3512d9ddc7a7832f104d093063965a.fontdata::
+DePixelBreitFett.ttf::FontFile/FontFile::1189216371074822277::1439291326::1748427073::1::::<><><>0<>0<>9ead066d7bfec4dae113c42f0c531982<>res://.godot/imported/DePixelBreitFett.ttf-922c8facc95b55f3d664aaae5ee37583.fontdata::
+depixelbreitfett.woff::FontFile/FontFile::2761644544189934915::1484213054::1748427073::1::::<><><>0<>0<>30496f4e0293e87018323c1411fe5c43<>res://.godot/imported/depixelbreitfett.woff-4a918b957779351bea6f04cd7ea84994.fontdata::
+depixelbreitfett.woff2::FontFile/FontFile::1158251554252630547::1484213054::1748427073::1::::<><><>0<>0<>144973138c2e2b23c758fc3153a958e8<>res://.godot/imported/depixelbreitfett.woff2-fc4dc5b759926af723e89f461eaf5497.fontdata::
+DePixelHalbfett.otf::FontFile/FontFile::4317339836094584887::1439291262::1748427073::1::::<><><>0<>0<>559c39c8d3338658480c0f02af8fd944<>res://.godot/imported/DePixelHalbfett.otf-0bdb10c2ac8c9361019530726f400890.fontdata::
+DePixelHalbfett.ttf::FontFile/FontFile::7945939377600699794::1439291326::1748427073::1::::<><><>0<>0<>ca237adcf3cb8bf3baedad202581fe4d<>res://.godot/imported/DePixelHalbfett.ttf-90e37a9d7581e78a5c3c9748032e67c9.fontdata::
+depixelhalbfett.woff::FontFile/FontFile::2489389090510468812::1484213054::1748427073::1::::<><><>0<>0<>509ea502c3d5a634913b6e2d085b20ee<>res://.godot/imported/depixelhalbfett.woff-2e3fcf3c316b0e8276c0480bb98464b1.fontdata::
+depixelhalbfett.woff2::FontFile/FontFile::3073773305215998051::1484213054::1748427073::1::::<><><>0<>0<>0855a368d8b012eecd317d90d360c363<>res://.godot/imported/depixelhalbfett.woff2-720c114696b1f149717e46e99399995f.fontdata::
+DePixelIllegible.otf::FontFile/FontFile::2899448329448144142::1439291260::1748427073::1::::<><><>0<>0<>8c09c57f402c9cbbb4e00f1bd389f3e7<>res://.godot/imported/DePixelIllegible.otf-d98c62a3e77968e9cd2833d710af441c.fontdata::
+DePixelIllegible.ttf::FontFile/FontFile::8212256070819674241::1439291324::1748427073::1::::<><><>0<>0<>679fbd6324f7fc319f418f2125460f9e<>res://.godot/imported/DePixelIllegible.ttf-0569592493d984a0a4385e4ec15cb327.fontdata::
+depixelillegible.woff::FontFile/FontFile::8966224508426176562::1484213054::1748427073::1::::<><><>0<>0<>01129633ca19b52cc9f68cdd30e6f89b<>res://.godot/imported/depixelillegible.woff-6368908c91f0a2dfaf354b386fd87bdf.fontdata::
+depixelillegible.woff2::FontFile/FontFile::9177028785631440713::1484213054::1748427073::1::::<><><>0<>0<>c6a40012dbf49372f25ae177bf66f0a6<>res://.godot/imported/depixelillegible.woff2-b1a5aedddc992504a0e1aa6fa68b9cbc.fontdata::
+DePixelKlein.otf::FontFile/FontFile::9157052163976271325::1439291258::1748427073::1::::<><><>0<>0<>cdd9e2ce983a347445f59a8f4ba59b2e<>res://.godot/imported/DePixelKlein.otf-7b5078506bb793eb516f12185354d28f.fontdata::
+DePixelKlein.ttf::FontFile/FontFile::2316784062131907941::1439291322::1748427073::1::::<><><>0<>0<>a1bea36fafb49251c013224c041c5307<>res://.godot/imported/DePixelKlein.ttf-d01cc5bf269fe0ca03d5b5e15c8ffbae.fontdata::
+depixelklein.woff::FontFile/FontFile::2532990867046694880::1484213054::1748427073::1::::<><><>0<>0<>a1ef7c6a1fd3d9225642c2447be70129<>res://.godot/imported/depixelklein.woff-cad91956a138df860abec23b324f14b2.fontdata::
+depixelklein.woff2::FontFile/FontFile::5543141302081977503::1484213054::1748427073::1::::<><><>0<>0<>85f82a33ddc557f63d9a46be0d986b40<>res://.godot/imported/depixelklein.woff2-8a388fb6d547bf02a9f5dd1f9b0a4bf5.fontdata::
+DePixelSchmal.otf::FontFile/FontFile::5490004572688743348::1439291258::1748427073::1::::<><><>0<>0<>afa927fb615b224556dfd80f73db4989<>res://.godot/imported/DePixelSchmal.otf-b3aa07ac5793d72f37234a60ab697da4.fontdata::
+DePixelSchmal.ttf::FontFile/FontFile::3237621389026432591::1439291324::1748427073::1::::<><><>0<>0<>b411d0f58f11b80960c1a80645328bf1<>res://.godot/imported/DePixelSchmal.ttf-aa56d5cd7118c8ba4123be0923ad21be.fontdata::
+depixelschmal.woff::FontFile/FontFile::303143465056526326::1484213054::1748427073::1::::<><><>0<>0<>d813e6158c0ebc6c56489da3be5d81b2<>res://.godot/imported/depixelschmal.woff-36c9891c6bad31215b69fa0ce8801be4.fontdata::
+depixelschmal.woff2::FontFile/FontFile::3752377342634080916::1484213054::1748427073::1::::<><><>0<>0<>f4b0e91e2cc3f9a31a16004cd638b7e3<>res://.godot/imported/depixelschmal.woff2-99b3a36b3492736a059a3512792dff73.fontdata::
 ::res://Assets/Fonts/minecraftia/::1748426849
-Minecraftia-Regular.ttf::FontFile::8949095454812132538::1410204386::1748426849::1::::<><><>0<>0<>cc7e61099d7e94a8d644d33d6c69ad5c<>res://.godot/imported/Minecraftia-Regular.ttf-a8fe5ae408a9fb64b001daf21399a6b6.fontdata::
-readme.txt::TextFile::-1::1410203980::0::1::::<><><>0<>0<><>::
-sample.png::CompressedTexture2D::402599476929431017::1328087890::1748426849::1::::<><><>0<>0<>be354d442f4f33d03ef9d9185bad53cc<>res://.godot/imported/sample.png-ef4d28e8d576b4e29d2285e4ecd18e73.ctex::
+Minecraftia-Regular.ttf::FontFile/FontFile::8949095454812132538::1410204386::1748426849::1::::<><><>0<>0<>cc7e61099d7e94a8d644d33d6c69ad5c<>res://.godot/imported/Minecraftia-Regular.ttf-a8fe5ae408a9fb64b001daf21399a6b6.fontdata::
+readme.txt::TextFile/TextFile::-1::1410203980::0::1::::<><><>0<>0<><>::
+sample.png::CompressedTexture2D/CompressedTexture2D::402599476929431017::1328087890::1748426849::1::::<><><>0<>0<>be354d442f4f33d03ef9d9185bad53cc<>res://.godot/imported/sample.png-ef4d28e8d576b4e29d2285e4ecd18e73.ctex::
 ::res://Assets/Fonts/Stylized/::1748426849
-04B_30__.TTF::FontFile::7742472848845499608::989326928::1748426849::1::::<><><>0<>0<>b91a469e860ababc410c20fbc3659dac<>res://.godot/imported/04B_30__.TTF-5b79b0f1984e5dff696e78b894e60a6b.fontdata::
+04B_30__.TTF::FontFile/FontFile::7742472848845499608::989326928::1748426849::1::::<><><>0<>0<>b91a469e860ababc410c20fbc3659dac<>res://.godot/imported/04B_30__.TTF-5b79b0f1984e5dff696e78b894e60a6b.fontdata::
 ::res://Assets/kenney_roguelike-characters/::1743151221
 License.txt::TextFile/TextFile::-1::1743151221::0::1::::<><><>0<>0<><>::
 Preview.png::CompressedTexture2D/CompressedTexture2D::344594510794498264::1743151221::1743151221::1::::<><><>0<>0<>c1bae71fddce7e9d80f3b5b09809c38f<>res://.godot/imported/Preview.png-cd960ad499e01c8ed16fb3937ccdf15c.ctex::
@@ -433,24 +433,24 @@ tile_0131.png::CompressedTexture2D/CompressedTexture2D::3239235357794769900::174
 ::res://Assets/NPCs/::1748170656
 Jeff.png::CompressedTexture2D/CompressedTexture2D::6100539219818993761::1748170656::1748170656::1::::<><><>0<>0<>169c9e39957e439103f4bcf05126ec45<>res://.godot/imported/Jeff.png-3bbda57f08ad0b01fc379c37191e21e4.ctex::
 ::res://Assets/Spriteframes/::1748425231
-npc_faces.tres::SpriteFrames::5054994046260943541::1748170656::0::1::::<><><>0<>0<><>::uid://cs6e8wbhtmjh6::::res://Assets/NPCs/Jeff.png
+npc_faces.tres::SpriteFrames/SpriteFrames::5054994046260943541::1748170656::0::1::::<><><>0<>0<><>::uid://cs6e8wbhtmjh6::::res://Assets/NPCs/Jeff.png
 player_frames.tres::SpriteFrames::6850214824731276872::1748425231::0::1::::<><><>0<>0<><>::uid://cvel6ngwpliil::::res://Assets/kenney_sokoban-pack/Tilesheet/top-down-character-front.png<>uid://bvoxdmafir0k0::::res://Assets/kenney_sokoban-pack/Tilesheet/top-down-character-left.png<>uid://dica4jl3hnuya::::res://Assets/kenney_sokoban-pack/Tilesheet/top-down-character-right.png<>uid://wv7ld5j8kq5q::::res://Assets/kenney_sokoban-pack/Tilesheet/top-down-character-back.png
-::res://Assets/Tilesets/::1748425231
-overworld.tres::TileSet::2764609755708092299::1748425231::0::1::::<><><>0<>0<><>::uid://cgkmfrxvi155f::::res://Assets/kenney_tiny-town/Tilemap/additional_tileset.png<>uid://2qb2kj86el1m::::res://Assets/kenney_tiny-town/Tilemap/tilemap_packed.png<>uid://xftcysfad0bk::::res://Assets/kenney_tiny-town/Tilemap/doors.png<>uid://depgfjhqhe0u3::::res://Assets/kenney_roguelike-characters/Spritesheet/roguelikeChar_transparent.png
+::res://Assets/Tilesets/::1748427667
+overworld.tres::TileSet::2764609755708092299::1748427667::0::1::::<><><>0<>0<><>::uid://cgkmfrxvi155f::::res://Assets/kenney_tiny-town/Tilemap/additional_tileset.png<>uid://2qb2kj86el1m::::res://Assets/kenney_tiny-town/Tilemap/tilemap_packed.png<>uid://xftcysfad0bk::::res://Assets/kenney_tiny-town/Tilemap/doors.png<>uid://depgfjhqhe0u3::::res://Assets/kenney_roguelike-characters/Spritesheet/roguelikeChar_transparent.png
 ::res://Exports/::1744363646
-::res://Scenes/::1748426041
+::res://Scenes/::1748429404
 Dynamic Notification.tscn::PackedScene/PackedScene::2981474428495062412::1747563575::0::1::::<><><>0<>0<><>::uid://cb2emmginrhpy::::res://Assets/pixil-frame-0.png<>uid://pp3pwx806lmk::::res://Scripts/dynamic_notification.gd
-House Indoor.tscn::PackedScene::4326021658261120870::1748426041::0::1::::<><><>0<>0<><>::uid://bfngyo5hq7mo6::::res://Assets/Tilesets/overworld.tres<>uid://bjv117g4u3uxn::::res://Scenes/player.tscn
-key.tscn::PackedScene::3276813949458316704::1748426041::0::1::::<><><>0<>0<><>::uid://sfyqat5dueb5::::res://Assets/kenney_tiny-town/Tiles/tile_0117.png<>uid://di3efh5iy7lnw::::res://Scripts/key.gd
-level template.tscn::PackedScene::3945507047333975065::1748170656::0::1::::<><><>0<>0<><>::uid://bfngyo5hq7mo6::::res://Assets/Tilesets/overworld.tres<>uid://bjv117g4u3uxn::::res://Scenes/player.tscn
-main_game_window.tscn::PackedScene::7382495593018153123::1748426041::0::1::::<><><>0<>0<><>::uid://dent3jv8hfurt::::res://Assets/dialogue_box.png<>uid://ceaxapquj3vdl::::res://Assets/Spriteframes/npc_faces.tres
-map1.tscn::PackedScene::1210959119922974517::1748426041::0::1::::<><><>0<>0<><>::uid://bfngyo5hq7mo6::::res://Assets/Tilesets/overworld.tres<>uid://bjv117g4u3uxn::::res://Scenes/player.tscn<>uid://bmxkv86wfa20s::::res://Scenes/key.tscn
-player.tscn::PackedScene::3063098973085612715::1748426041::0::1::::<><><>0<>0<><>::uid://t8hkijt1fwsf::::res://Scripts/player.gd<>uid://c4ukbjfnk438o::::res://Assets/Spriteframes/player_frames.tres<>uid://biqipiftf7elw::::res://Scenes/Dynamic Notification.tscn<>uid://20l7kqs32maf::::res://Scenes/sign.tscn
+House Indoor.tscn::PackedScene::4326021658261120870::1748429383::0::1::::<><><>0<>0<><>::uid://bfngyo5hq7mo6::::res://Assets/Tilesets/overworld.tres<>uid://bjv117g4u3uxn::::res://Scenes/player.tscn
+key.tscn::PackedScene::3276813949458316704::1748429383::0::1::::<><><>0<>0<><>::uid://sfyqat5dueb5::::res://Assets/kenney_tiny-town/Tiles/tile_0117.png<>uid://di3efh5iy7lnw::::res://Scripts/key.gd
+level template.tscn::PackedScene/PackedScene::3945507047333975065::1748170656::0::1::::<><><>0<>0<><>::uid://bfngyo5hq7mo6::::res://Assets/Tilesets/overworld.tres<>uid://bjv117g4u3uxn::::res://Scenes/player.tscn
+main_game_window.tscn::PackedScene::7382495593018153123::1748429404::0::1::::<><><>0<>0<><>::uid://dent3jv8hfurt::::res://Assets/dialogue_box.png<>uid://ceaxapquj3vdl::::res://Assets/Spriteframes/npc_faces.tres<>uid://dlhcpwqyhdqy1::::res://Assets/Fonts/depixel/DePixelHalbfett.ttf
+map1.tscn::PackedScene::1210959119922974517::1748429383::0::1::::<><><>0<>0<><>::uid://bfngyo5hq7mo6::::res://Assets/Tilesets/overworld.tres<>uid://bjv117g4u3uxn::::res://Scenes/player.tscn<>uid://bmxkv86wfa20s::::res://Scenes/key.tscn
+player.tscn::PackedScene::3063098973085612715::1748429383::0::1::::<><><>0<>0<><>::uid://t8hkijt1fwsf::::res://Scripts/player.gd<>uid://c4ukbjfnk438o::::res://Assets/Spriteframes/player_frames.tres<>uid://biqipiftf7elw::::res://Scenes/Dynamic Notification.tscn<>uid://20l7kqs32maf::::res://Scenes/sign.tscn
 sign.tscn::PackedScene/PackedScene::1947433805210458765::1747563575::0::1::::<><><>0<>0<><>::uid://c2d3s17alh8tk::::res://Assets/largeSign.png
-::res://Scripts/::1748425972
+::res://Scripts/::1748429319
 dynamic_notification.gd::GDScript/GDScript::1085526376165630518::1744975465::0::1::::<>Sprite2D<><>0<>0<><>::
-global.gd::GDScript::2334710923513551609::1748170656::0::1::::<>Node<><>0<>0<><>::
-key.gd::GDScript::7778827588642236156::1748170656::0::1::::<>Area2D<><>0<>0<><>::
-player.gd::GDScript::1402155806883283369::1748425972::0::1::::<>CharacterBody2D<><>0<>0<><>::
+global.gd::GDScript::2334710923513551609::1748429319::0::1::::<>Node<><>0<>0<><>::
+key.gd::GDScript/GDScript::7778827588642236156::1748170656::0::1::::<>Area2D<><>0<>0<><>::
+player.gd::GDScript::1402155806883283369::1748429278::0::1::::<>CharacterBody2D<><>0<>0<><>::
 player_grid_movement.gd::GDScript/GDScript::8285481891254385612::1744190797::0::1::::<>CharacterBody2D<><>0<>0<><>::
 player_movement.gd::GDScript/GDScript::7629498927403203199::1743151221::0::1::::<>CharacterBody2D<><>0<>0<><>::

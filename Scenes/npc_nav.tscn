@@ -1,0 +1,18 @@
+[gd_scene load_steps=2 format=3 uid="uid://gdbtte4q0cl7"]
+
+[ext_resource type="Script" uid="uid://7gd48t6phmvq" path="res://Scripts/npc.gd" id="1_b1got"]
+
+[node name="NPC Nav" type="Node2D"]
+script = ExtResource("1_b1got")
+
+[node name="NavigationAgent2D" type="NavigationAgent2D" parent="."]
+avoidance_enabled = true
+max_speed = 1.0
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+
+[connection signal="navigation_finished" from="NavigationAgent2D" to="." method="_on_navigation_agent_2d_navigation_finished"]
