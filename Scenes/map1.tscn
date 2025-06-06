@@ -84,7 +84,6 @@ loop = false
 
 [node name="NPC Nav" parent="TileMap/Path2D/PathFollow2D" instance=ExtResource("2_xgpx1")]
 rotation = -1.50074
-scale = Vector2(1, 1)
 
 [node name="Player" parent="." instance=ExtResource("2_cc8cj")]
 position = Vector2(163, 210)
