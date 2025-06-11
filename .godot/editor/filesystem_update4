@@ -7,3 +7,4 @@ res://Scenes/key.tscn
 res://Scenes/main_game_window.tscn
 res://Scenes/npc_nav.tscn
 res://Scripts/npc.gd
+res://Scripts/global.gd

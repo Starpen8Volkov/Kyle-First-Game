@@ -7,9 +7,9 @@
 
 [sub_resource type="Curve2D" id="Curve2D_xgpx1"]
 _data = {
-"points": PackedVector2Array(0, 0, 0, 0, 96, 176, 0, 0, 0, 0, 100, 233, 0, 0, 0, 0, 154, 257, 0, 0, 0, 0, 184, 209, 0, 0, 0, 0, 185.046, 196.019, 0, 0, 0, 0, 185, 183)
+"points": PackedVector2Array(0, 0, 0, 0, 92, 176, 0, 0, 0, 0, 92, 247, 0, 0, 0, 0, 184, 247, 0, 0, 0, 0, 186, 177)
 }
-point_count = 6
+point_count = 4
 
 [node name="Map 1" type="Node2D" groups=["map"]]
 
@@ -74,16 +74,17 @@ z_index = 1
 use_parent_material = true
 tile_set = ExtResource("1_3vq46")
 
-[node name="Path2D" type="Path2D" parent="TileMap"]
+[node name="Paths" type="Node2D" parent="."]
+position = Vector2(0, -1)
+
+[node name="Jeff1" type="Path2D" parent="Paths"]
+position = Vector2(0, 1)
 curve = SubResource("Curve2D_xgpx1")
 
-[node name="PathFollow2D" type="PathFollow2D" parent="TileMap/Path2D"]
-position = Vector2(96, 176)
-rotation = 1.50074
-loop = false
-
-[node name="NPC Nav" parent="TileMap/Path2D/PathFollow2D" instance=ExtResource("2_xgpx1")]
-rotation = -1.50074
+[node name="NPC Nav" parent="Paths" groups=["nav"] instance=ExtResource("2_xgpx1")]
+visible = false
+position = Vector2(96, 177)
+rotation = -0.0264175
 
 [node name="Player" parent="." instance=ExtResource("2_cc8cj")]
 position = Vector2(163, 210)

@@ -40,6 +40,12 @@ var npcdialogues={
 		"JK"
 	]
 }
+var npctriggers={
+	"Jeff":{
+		"2":"Jeff1"
+	}
+}
+var nav
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -97,6 +103,7 @@ func loadmap(l, map, pos=null, dir=null):
 	solid_dynamic = get_tree().get_nodes_in_group("solid_dynamic")[-1]
 	npc_face = get_tree().get_first_node_in_group("npc_face")
 	npc_text = get_tree().get_first_node_in_group("npc_text")
+	nav = get_tree().get_nodes_in_group("nav")[-1]
 	
 	if pos!=null:
 		Player.position=pos

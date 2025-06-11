@@ -1,19 +1,49 @@
 extends Node2D
 
-var nav
-var spd=10.0
-var start
-var merge=0
+var spd=20.0
 var max_progress
+var curve
+var points=[]
+var progress=0
+var previous_tile
+var npc=[]
 
 func _ready() -> void:
-	get_parent().progress=1000
-	max_progress=get_parent().progress
-	get_parent().progress=0
-	start=get_parent().progress
+	spd=Global.tileSize.x
 
 func _process(delta: float) -> void:
-	get_parent().progress=lerp(start, 200.0, merge)
-	merge+=(spd/100)*delta
-	if get_parent().progress>=max_progress:
-		print("done")
+	#get_parent().progress=lerp(start, 200.0, merge)
+	#merge+=(spd/100)*delta
+	#if get_parent().progress>=max_progress:
+		#print("done")
+	
+	if progress>=max_progress:
+		progress-=1
+		position=points[progress]
+		#print("finish")
+		pass
+	elif position.distance_to(points[progress])<spd/4:
+		position=points[progress]
+		progress+=1
+		#print(progress," ",position)
+	else:
+		if previous_tile!=null:
+			#print(previous_tile)
+			Global.solid_dynamic.set_cell(previous_tile[0], previous_tile[1], previous_tile[2])
+		
+		position=position.move_toward(points[progress],spd*delta)
+		#print(points[progress])
+		var p=(((position/Global.tileSize).round()*Global.tileSize)-(Global.tileSize/2))/Global.tileSize
+		#print("  ",p)
+		previous_tile=[p,Global.solid_dynamic.get_cell_source_id(p),Global.solid_dynamic.get_cell_atlas_coords(p)]
+		Global.solid_dynamic.set_cell(p,npc[0],npc[1])
+
+func start_path(id, pos):
+	npc=[Global.solid_dynamic.get_cell_source_id(pos), Global.solid_dynamic.get_cell_atlas_coords(pos)]
+	curve=get_parent().get_node(id)
+	max_progress=curve.curve.point_count
+	for i in max_progress:
+		var p=curve.curve.get_point_position(i)
+		p=((p/Global.tileSize).round()*Global.tileSize)
+		points.append(p)
+		curve.curve.set_point_position(i,p)
