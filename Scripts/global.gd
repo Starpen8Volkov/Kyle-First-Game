@@ -24,7 +24,7 @@ var signsText={
 }
 var moneybagItems={
 	"map1":{
-		"(4, 14)":{"(3, 14)":"key", "(5, 14)":"key", "(4, 13)":"key", "(4, 15)":"key"}
+		"(4, 14)":{"(3, 14)":"coin", "(5, 14)":"coin", "(4, 13)":"key", "(4, 15)":"key"}
 	}
 }
 var dynamics
@@ -37,24 +37,25 @@ var in_dialogue=false
 var npcdialogues={
 	"Jeff":[
 		"Hello!\nWelcome to HELL!!!",
-		"JK"
+		"JK",
+		["Jeff1", Vector2i(6, 11)],
+		"lol",
+		"soz"
 	]
 }
-var npctriggers={
-	"Jeff":{
-		"2":"Jeff1"
-	}
+var npclimits={
+	"Jeff":[0, npcdialogues["Jeff"].size()-1]
 }
 var nav
+var keys=0
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	collectables={
-		"key": preload("res://Scenes/key.tscn")
+		"key": preload("res://Scenes/key.tscn"),
+		"coin": preload("res://Scenes/coin.tscn")
 	}
 	loadmap(true, Mapname)
-	pass
-
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta):
@@ -63,10 +64,13 @@ func _process(_delta):
 
 
 func keyCollected():
+	keys+=1
+	print("Key Collected, Current Amount of Keys is: "+str(keys))
+
+func coinCollected():
 	score+=1
 	print("Key Collected, Current Score is: "+str(score))
 	get_tree().get_first_node_in_group("score").text = str(score)
-
 
 func generateKeys(num):
 	for i in num:

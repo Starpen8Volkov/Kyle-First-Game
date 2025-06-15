@@ -1,9 +1,10 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1749632544
-export_presets.cfg::TextFile::-1::1744363646::0::1::::<><><>0<>0<><>::
+::res://::1749978338
+export_presets.cfg::TextFile/TextFile::-1::1744363646::0::1::::<><><>0<>0<><>::
 icon.svg::CompressedTexture2D/CompressedTexture2D::1645368062317874776::1743151221::1743151221::1::::<><><>0<>0<>bd45657a9432b8db1fe003a1354a9540<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
-README.md::TextFile::-1::1743151221::0::1::::<><><>0<>0<><>::
-::res://Assets/::1748426759
+README.md::TextFile/TextFile::-1::1743151221::0::1::::<><><>0<>0<><>::
+::res://Assets/::1749982982
+coin.png::CompressedTexture2D::2093798038489402292::1743151221::1749982985::1::::<><><>0<>0<>7a4fd830ab252e82ad75d6d375641ef9<>res://.godot/imported/coin.png-23e506fc535e1e81a67b247520f1351a.ctex::
 dialogue_box.png::CompressedTexture2D/CompressedTexture2D::7468058468186097309::1748170656::1748170656::1::::<><><>0<>0<>3d819bd1ae00b19c4a2dd43a22bcee62<>res://.godot/imported/dialogue_box.png-44428d683d811a011da29d134c2a81ea.ctex::
 largeSign.png::CompressedTexture2D/CompressedTexture2D::6675866914018863612::1746610918::1746960853::1::::<><><>0<>0<>aaa17cb5d293ec06a772148ed80d17c4<>res://.godot/imported/largeSign.png-4021c99880ca7a11e2397d9c2b27e81b.ctex::
 pixil-frame-0.png::CompressedTexture2D/CompressedTexture2D::4899033347812333834::1744195427::1744195482::1::::<><><>0<>0<>ce84aa87cac8404c0567a4ec9dfb8d4b<>res://.godot/imported/pixil-frame-0.png-1e2e14a6fca0ab207413f8785ae4b7df.ctex::
@@ -36,20 +37,20 @@ depixelschmal.woff::FontFile/FontFile::303143465056526326::1484213054::174842707
 depixelschmal.woff2::FontFile/FontFile::3752377342634080916::1484213054::1748427073::1::::<><><>0<>0<>f4b0e91e2cc3f9a31a16004cd638b7e3<>res://.godot/imported/depixelschmal.woff2-99b3a36b3492736a059a3512792dff73.fontdata::
 ::res://Assets/Fonts/minecraftia/::1748426849
 Minecraftia-Regular.ttf::FontFile/FontFile::8949095454812132538::1410204386::1748426849::1::::<><><>0<>0<>cc7e61099d7e94a8d644d33d6c69ad5c<>res://.godot/imported/Minecraftia-Regular.ttf-a8fe5ae408a9fb64b001daf21399a6b6.fontdata::
-readme.txt::TextFile::-1::1410203980::0::1::::<><><>0<>0<><>::
+readme.txt::TextFile/TextFile::-1::1410203980::0::1::::<><><>0<>0<><>::
 sample.png::CompressedTexture2D/CompressedTexture2D::402599476929431017::1328087890::1748426849::1::::<><><>0<>0<>be354d442f4f33d03ef9d9185bad53cc<>res://.godot/imported/sample.png-ef4d28e8d576b4e29d2285e4ecd18e73.ctex::
 ::res://Assets/Fonts/Stylized/::1748426849
 04B_30__.TTF::FontFile/FontFile::7742472848845499608::989326928::1748426849::1::::<><><>0<>0<>b91a469e860ababc410c20fbc3659dac<>res://.godot/imported/04B_30__.TTF-5b79b0f1984e5dff696e78b894e60a6b.fontdata::
 ::res://Assets/kenney_roguelike-characters/::1743151221
-License.txt::TextFile::-1::1743151221::0::1::::<><><>0<>0<><>::
+License.txt::TextFile/TextFile::-1::1743151221::0::1::::<><><>0<>0<><>::
 Preview.png::CompressedTexture2D/CompressedTexture2D::344594510794498264::1743151221::1743151221::1::::<><><>0<>0<>c1bae71fddce7e9d80f3b5b09809c38f<>res://.godot/imported/Preview.png-cd960ad499e01c8ed16fb3937ccdf15c.ctex::
 Sample.png::CompressedTexture2D/CompressedTexture2D::6571967157380956510::1743151221::1743151221::1::::<><><>0<>0<>16d6ab48808cec832e5acb9a64fed421<>res://.godot/imported/Sample.png-eaccd711847230e8c57229b0bfc1cff1.ctex::
 ::res://Assets/kenney_roguelike-characters/Spritesheet/::1743151221
 roguelikeChar_magenta.png::CompressedTexture2D/CompressedTexture2D::5448136225254756652::1743151221::1743151221::1::::<><><>0<>0<>4caa153341a5ac4e73f1641a5021ad2f<>res://.godot/imported/roguelikeChar_magenta.png-dfc9113acb73b6cf886f8fb6f99671cf.ctex::
 roguelikeChar_transparent.png::CompressedTexture2D/CompressedTexture2D::7471356807128742776::1743151221::1743151221::1::::<><><>0<>0<>57d9dd90bf79b7c44ccdcdf393aa80d7<>res://.godot/imported/roguelikeChar_transparent.png-d7eac66dfbdd1641badc3dd346cdaed5.ctex::
-spritesheetInfo.txt::TextFile::-1::1743151221::0::1::::<><><>0<>0<><>::
+spritesheetInfo.txt::TextFile/TextFile::-1::1743151221::0::1::::<><><>0<>0<><>::
 ::res://Assets/kenney_sokoban-pack/::1743151221
-License.txt::TextFile::-1::1743151221::0::1::::<><><>0<>0<><>::
+License.txt::TextFile/TextFile::-1::1743151221::0::1::::<><><>0<>0<><>::
 Preview.png::CompressedTexture2D/CompressedTexture2D::5659388331009664982::1743151221::1743151221::1::::<><><>0<>0<>331a17413f44b29c3c53eb6c24c19237<>res://.godot/imported/Preview.png-aaccb391099cdfe647131fa3e15e166c.ctex::
 Preview_KenneyNL.png::CompressedTexture2D/CompressedTexture2D::7199306559195632169::1743151221::1743151221::1::::<><><>0<>0<>901cc7999398e5be512e1ea593f7d701<>res://.godot/imported/Preview_KenneyNL.png-2a8d82a7e64acb79cd83e6bf336f22bf.ctex::
 Sample.png::CompressedTexture2D/CompressedTexture2D::2839228534258670259::1743151221::1743151221::1::::<><><>0<>0<>055037b253a4af143cfc33081eb55c5e<>res://.godot/imported/Sample.png-2812343b66144105529db9233acc2098.ctex::
@@ -272,9 +273,9 @@ player_23.png::CompressedTexture2D/CompressedTexture2D::2793423986785649015::174
 player_24.png::CompressedTexture2D/CompressedTexture2D::981735137301282993::1743151221::1743151221::1::::<><><>0<>0<>341c8f5ee67ac085f8a95bb65bcd9a77<>res://.godot/imported/player_24.png-bec3bcb22118f4588070858700806105.ctex::
 ::res://Assets/kenney_sokoban-pack/Spritesheet/::1743151221
 sokoban_spritesheet.png::CompressedTexture2D/CompressedTexture2D::2502866219205957329::1743151221::1743151221::1::::<><><>0<>0<>84ac25f841361639111f965362dae286<>res://.godot/imported/sokoban_spritesheet.png-3c1163b4d6e5a51587e2a726b2d84572.ctex::
-sokoban_spritesheet.xml::TextFile::-1::1743151221::0::1::::<><><>0<>0<><>::
+sokoban_spritesheet.xml::TextFile/TextFile::-1::1743151221::0::1::::<><><>0<>0<><>::
 sokoban_spritesheet@2.png::CompressedTexture2D/CompressedTexture2D::1007349858279517806::1743151221::1743151221::1::::<><><>0<>0<>a7bcc419973e386843dd065782898a01<>res://.godot/imported/sokoban_spritesheet@2.png-fbbc43911afccabcfbef1446ba08febf.ctex::
-sokoban_spritesheet@2.xml::TextFile::-1::1743151221::0::1::::<><><>0<>0<><>::
+sokoban_spritesheet@2.xml::TextFile/TextFile::-1::1743151221::0::1::::<><><>0<>0<><>::
 ::res://Assets/kenney_sokoban-pack/Tilesheet/::1743151221
 sokoban_tilesheet.png::CompressedTexture2D/CompressedTexture2D::5390417532420676090::1743151221::1743151221::1::::<><><>0<>0<>9fd6398610eb2ff822556cce528f58ab<>res://.godot/imported/sokoban_tilesheet.png-097e5ac5067798a7778f2231efeb0c3c.ctex::
 sokoban_tilesheet@2.png::CompressedTexture2D/CompressedTexture2D::7058213763209209077::1743151221::1743151221::1::::<><><>0<>0<>08bcfe0f1b4a443980d01326ad730c4b<>res://.godot/imported/sokoban_tilesheet@2.png-a9e7287ea0e493d64407aa6c2a8d9644.ctex::
@@ -285,10 +286,10 @@ top-down-character-right.png::CompressedTexture2D/CompressedTexture2D::772495383
 ::res://Assets/kenney_sokoban-pack/Vector/::1743151221
 sokoban_vector.svg::CompressedTexture2D/CompressedTexture2D::4715845910693109901::1743151221::1743151221::1::::<><><>0<>0<>21e46048f3eab3dd79616d7b15ec5c45<>res://.godot/imported/sokoban_vector.svg-6cf5de7f295ce72e8c5e5b4bbd64ab85.ctex::
 ::res://Assets/kenney_tiny-town/::1743151221
-License.txt::TextFile::-1::1743151221::0::1::::<><><>0<>0<><>::
+License.txt::TextFile/TextFile::-1::1743151221::0::1::::<><><>0<>0<><>::
 Preview.png::CompressedTexture2D/CompressedTexture2D::2828574942495558194::1743151221::1743151221::1::::<><><>0<>0<>36222de55981bc5d62b0e7d6eb342f6e<>res://.godot/imported/Preview.png-7c117857507b20dd2a411f30e0f024b4.ctex::
 Sample.png::CompressedTexture2D/CompressedTexture2D::6651203036785932924::1743151221::1743151221::1::::<><><>0<>0<>637323b9aa9b37bb3607de93c808c11a<>res://.godot/imported/Sample.png-c2931678ff4fcde4cc7e3fcf1a9f05d9.ctex::
-Tilesheet.txt::TextFile::-1::1743151221::0::1::::<><><>0<>0<><>::
+Tilesheet.txt::TextFile/TextFile::-1::1743151221::0::1::::<><><>0<>0<><>::
 ::res://Assets/kenney_tiny-town/Tilemap/::1746009065
 additional_tileset.png::CompressedTexture2D/CompressedTexture2D::5215356669031062441::1745403809::1743151221::1::::<><><>0<>0<>5f0552dc22c1dd6bbb4976240a86cbad<>res://.godot/imported/additional_tileset.png-0f380700e5c0f769b6a1612847bfabdc.ctex::
 doors.png::CompressedTexture2D/CompressedTexture2D::1625823775489623240::1746009056::1746009065::1::::<><><>0<>0<>0103944493b13aa9b11feeca02c0b391<>res://.godot/imported/doors.png-7ddec4632fceaa3d323f697148c19a72.ctex::
@@ -432,27 +433,29 @@ tile_0130.png::CompressedTexture2D/CompressedTexture2D::3860064071538338977::174
 tile_0131.png::CompressedTexture2D/CompressedTexture2D::3239235357794769900::1743151221::1743151221::1::::<><><>0<>0<>d190823fc42badf76d7a770157f720ee<>res://.godot/imported/tile_0131.png-a669131d34de126f8b92eb3fb9c5be96.ctex::
 ::res://Assets/NPCs/::1748170656
 Jeff.png::CompressedTexture2D/CompressedTexture2D::6100539219818993761::1748170656::1748170656::1::::<><><>0<>0<>169c9e39957e439103f4bcf05126ec45<>res://.godot/imported/Jeff.png-3bbda57f08ad0b01fc379c37191e21e4.ctex::
-::res://Assets/Spriteframes/::1749029254
-npc_faces.tres::SpriteFrames::5054994046260943541::1748170656::0::1::::<><><>0<>0<><>::uid://cs6e8wbhtmjh6::::res://Assets/NPCs/Jeff.png
-player_frames.tres::SpriteFrames::6850214824731276872::1749029254::0::1::::<><><>0<>0<><>::uid://cvel6ngwpliil::::res://Assets/kenney_sokoban-pack/Tilesheet/top-down-character-front.png<>uid://bvoxdmafir0k0::::res://Assets/kenney_sokoban-pack/Tilesheet/top-down-character-left.png<>uid://dica4jl3hnuya::::res://Assets/kenney_sokoban-pack/Tilesheet/top-down-character-right.png<>uid://wv7ld5j8kq5q::::res://Assets/kenney_sokoban-pack/Tilesheet/top-down-character-back.png
-::res://Assets/Tilesets/::1749029254
-overworld.tres::TileSet::2764609755708092299::1749029254::0::1::::<><><>0<>0<><>::uid://cgkmfrxvi155f::::res://Assets/kenney_tiny-town/Tilemap/additional_tileset.png<>uid://2qb2kj86el1m::::res://Assets/kenney_tiny-town/Tilemap/tilemap_packed.png<>uid://xftcysfad0bk::::res://Assets/kenney_tiny-town/Tilemap/doors.png<>uid://depgfjhqhe0u3::::res://Assets/kenney_roguelike-characters/Spritesheet/roguelikeChar_transparent.png
+::res://Assets/Spriteframes/::1749978346
+npc_faces.tres::SpriteFrames/SpriteFrames::5054994046260943541::1748170656::0::1::::<><><>0<>0<><>::uid://cs6e8wbhtmjh6::::res://Assets/NPCs/Jeff.png
+player_frames.tres::SpriteFrames::6850214824731276872::1749978346::0::1::::<><><>0<>0<><>::uid://cvel6ngwpliil::::res://Assets/kenney_sokoban-pack/Tilesheet/top-down-character-front.png<>uid://bvoxdmafir0k0::::res://Assets/kenney_sokoban-pack/Tilesheet/top-down-character-left.png<>uid://dica4jl3hnuya::::res://Assets/kenney_sokoban-pack/Tilesheet/top-down-character-right.png<>uid://wv7ld5j8kq5q::::res://Assets/kenney_sokoban-pack/Tilesheet/top-down-character-back.png
+::res://Assets/Tilesets/::1749982600
+overworld.tres::TileSet::2764609755708092299::1749982600::0::1::::<><><>0<>0<><>::uid://cgkmfrxvi155f::::res://Assets/kenney_tiny-town/Tilemap/additional_tileset.png<>uid://2qb2kj86el1m::::res://Assets/kenney_tiny-town/Tilemap/tilemap_packed.png<>uid://xftcysfad0bk::::res://Assets/kenney_tiny-town/Tilemap/doors.png<>uid://depgfjhqhe0u3::::res://Assets/kenney_roguelike-characters/Spritesheet/roguelikeChar_transparent.png
 ::res://Exports/::1744363646
-::res://Scenes/::1749632528
-Dynamic Notification.tscn::PackedScene::2981474428495062412::1747563575::0::1::::<><><>0<>0<><>::uid://cb2emmginrhpy::::res://Assets/pixil-frame-0.png<>uid://pp3pwx806lmk::::res://Scripts/dynamic_notification.gd
-House Indoor.tscn::PackedScene::4326021658261120870::1749034733::0::1::::<><><>0<>0<><>::uid://bfngyo5hq7mo6::::res://Assets/Tilesets/overworld.tres<>uid://bjv117g4u3uxn::::res://Scenes/player.tscn
-key.tscn::PackedScene::3276813949458316704::1749034733::0::1::::<><><>0<>0<><>::uid://sfyqat5dueb5::::res://Assets/kenney_tiny-town/Tiles/tile_0117.png<>uid://di3efh5iy7lnw::::res://Scripts/key.gd
-level template.tscn::PackedScene::3945507047333975065::1748170656::0::1::::<><><>0<>0<><>::uid://bfngyo5hq7mo6::::res://Assets/Tilesets/overworld.tres<>uid://bjv117g4u3uxn::::res://Scenes/player.tscn
-main_game_window.tscn::PackedScene::7382495593018153123::1749034734::0::1::::<><><>0<>0<><>::uid://dent3jv8hfurt::::res://Assets/dialogue_box.png<>uid://ceaxapquj3vdl::::res://Assets/Spriteframes/npc_faces.tres<>uid://dlhcpwqyhdqy1::::res://Assets/Fonts/depixel/DePixelHalbfett.ttf
-map1.tscn::PackedScene::1210959119922974517::1749632528::0::1::::<><><>0<>0<><>::uid://bfngyo5hq7mo6::::res://Assets/Tilesets/overworld.tres<>uid://bjv117g4u3uxn::::res://Scenes/player.tscn<>uid://gdbtte4q0cl7::::res://Scenes/npc_nav.tscn<>uid://bmxkv86wfa20s::::res://Scenes/key.tscn
-npc_nav.tscn::PackedScene::427421847630197510::1749034734::0::1::::<><><>0<>0<><>::uid://7gd48t6phmvq::::res://Scripts/npc.gd
-player.tscn::PackedScene::3063098973085612715::1749034733::0::1::::<><><>0<>0<><>::uid://t8hkijt1fwsf::::res://Scripts/player.gd<>uid://c4ukbjfnk438o::::res://Assets/Spriteframes/player_frames.tres<>uid://biqipiftf7elw::::res://Scenes/Dynamic Notification.tscn<>uid://20l7kqs32maf::::res://Scenes/sign.tscn
-sign.tscn::PackedScene::1947433805210458765::1747563575::0::1::::<><><>0<>0<><>::uid://c2d3s17alh8tk::::res://Assets/largeSign.png
-::res://Scripts/::1749632528
-dynamic_notification.gd::GDScript::1085526376165630518::1744975465::0::1::::<>Sprite2D<><>0<>0<><>::
-global.gd::GDScript::2334710923513551609::1748429319::0::1::::<>Node<><>0<>0<><>::
-key.gd::GDScript::7778827588642236156::1748170656::0::1::::<>Area2D<><>0<>0<><>::
-npc.gd::GDScript::2258664965993607890::1749632528::0::1::::<>Node2D<><>0<>0<><>::
-player.gd::GDScript::1402155806883283369::1749029453::0::1::::<>CharacterBody2D<><>0<>0<><>::
-player_grid_movement.gd::GDScript::8285481891254385612::1744190797::0::1::::<>CharacterBody2D<><>0<>0<><>::
-player_movement.gd::GDScript::7629498927403203199::1743151221::0::1::::<>CharacterBody2D<><>0<>0<><>::
+::res://Scenes/::1749982600
+Dynamic Notification.tscn::PackedScene/PackedScene::2981474428495062412::1747563575::0::1::::<><><>0<>0<><>::uid://cb2emmginrhpy::::res://Assets/pixil-frame-0.png<>uid://pp3pwx806lmk::::res://Scripts/dynamic_notification.gd
+House Indoor.tscn::PackedScene::4326021658261120870::1749982105::0::1::::<><><>0<>0<><>::uid://bfngyo5hq7mo6::::res://Assets/Tilesets/overworld.tres<>uid://bjv117g4u3uxn::::res://Scenes/player.tscn
+key.tscn::PackedScene::3276813949458316704::1749982105::0::1::::<><><>0<>0<><>::uid://sfyqat5dueb5::::res://Assets/kenney_tiny-town/Tiles/tile_0117.png<>uid://di3efh5iy7lnw::::res://Scripts/key.gd
+level template.tscn::PackedScene/PackedScene::3945507047333975065::1748170656::0::1::::<><><>0<>0<><>::uid://bfngyo5hq7mo6::::res://Assets/Tilesets/overworld.tres<>uid://bjv117g4u3uxn::::res://Scenes/player.tscn
+main_game_window.tscn::PackedScene::7382495593018153123::1749982105::0::1::::<><><>0<>0<><>::uid://dent3jv8hfurt::::res://Assets/dialogue_box.png<>uid://ceaxapquj3vdl::::res://Assets/Spriteframes/npc_faces.tres<>uid://dlhcpwqyhdqy1::::res://Assets/Fonts/depixel/DePixelHalbfett.ttf
+map1.tscn::PackedScene::1210959119922974517::1749982105::0::1::::<><><>0<>0<><>::uid://bfngyo5hq7mo6::::res://Assets/Tilesets/overworld.tres<>uid://bjv117g4u3uxn::::res://Scenes/player.tscn<>uid://gdbtte4q0cl7::::res://Scenes/npc_nav.tscn<>uid://bmxkv86wfa20s::::res://Scenes/key.tscn
+npc_nav.tscn::PackedScene::427421847630197510::1749982105::0::1::::<><><>0<>0<><>::uid://7gd48t6phmvq::::res://Scripts/npc.gd
+player.tscn::PackedScene::3063098973085612715::1749982105::0::1::::<><><>0<>0<><>::uid://t8hkijt1fwsf::::res://Scripts/player.gd<>uid://c4ukbjfnk438o::::res://Assets/Spriteframes/player_frames.tres<>uid://biqipiftf7elw::::res://Scenes/Dynamic Notification.tscn<>uid://20l7kqs32maf::::res://Scenes/sign.tscn
+coin.tscn::PackedScene::6998768536681585175::1749982600::0::1::::<><><>0<>0<><>::uid://ih0712fkdf5i::::res://Scripts/coin.gd<>uid://sfyqat5dueb5::::res://Assets/kenney_tiny-town/Tiles/tile_0117.png
+sign.tscn::PackedScene/PackedScene::1947433805210458765::1747563575::0::1::::<><><>0<>0<><>::uid://c2d3s17alh8tk::::res://Assets/largeSign.png
+::res://Scripts/::1749982583
+dynamic_notification.gd::GDScript/GDScript::1085526376165630518::1744975465::0::1::::<>Sprite2D<><>0<>0<><>::
+global.gd::GDScript::2334710923513551609::1749980660::0::1::::<>Node<><>0<>0<><>::
+key.gd::GDScript/GDScript::7778827588642236156::1748170656::0::1::::<>Area2D<><>0<>0<><>::
+npc.gd::GDScript::2258664965993607890::1749981982::0::1::::<>Node2D<><>0<>0<><>::
+player.gd::GDScript::1402155806883283369::1749980821::0::1::::<>CharacterBody2D<><>0<>0<><>::
+player_grid_movement.gd::GDScript/GDScript::8285481891254385612::1744190797::0::1::::<>CharacterBody2D<><>0<>0<><>::
+player_movement.gd::GDScript/GDScript::7629498927403203199::1743151221::0::1::::<>CharacterBody2D<><>0<>0<><>::
+coin.gd::GDScript::577537871164283952::1749982583::0::1::::<>Area2D<><>0<>0<><>::

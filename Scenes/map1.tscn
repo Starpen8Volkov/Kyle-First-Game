@@ -7,9 +7,9 @@
 
 [sub_resource type="Curve2D" id="Curve2D_xgpx1"]
 _data = {
-"points": PackedVector2Array(0, 0, 0, 0, 92, 176, 0, 0, 0, 0, 92, 247, 0, 0, 0, 0, 184, 247, 0, 0, 0, 0, 186, 177)
+"points": PackedVector2Array(0, 0, 0, 0, 104, 185, 0, 0, 0, 0, 90, 185, 0, 0, 0, 0, 89.3558, 208.177, 0, 0, 0, 0, 89, 249, 0, 0, 0, 0, 185, 250, 0, 0, 0, 0, 186, 177)
 }
-point_count = 4
+point_count = 6
 
 [node name="Map 1" type="Node2D" groups=["map"]]
 

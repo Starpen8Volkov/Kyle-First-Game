@@ -81,11 +81,11 @@ func _process(_delta):
 					toMove=Vector2(0,(Global.tileSize.y)*directionY)
 		else:
 			if Input.is_action_just_pressed("Player_Right") or Input.is_action_just_pressed("Player_Down"):
-				if npc.get_custom_data("npc_say")<Global.npcdialogues[npc.get_custom_data("npc_name")].size()-1:
+				if npc.get_custom_data("npc_say")<Global.npclimits[npc.get_custom_data("npc_name")][1]:
 					npc.set_custom_data("npc_say",npc.get_custom_data("npc_say")+1)
 					update_dialogue(npc)
 			if Input.is_action_just_pressed("Player_Left") or Input.is_action_just_pressed("Player_Up"):
-				if npc.get_custom_data("npc_say")>0:
+				if npc.get_custom_data("npc_say")>Global.npclimits[npc.get_custom_data("npc_name")][0]:
 					npc.set_custom_data("npc_say",npc.get_custom_data("npc_say")-1)
 					update_dialogue(npc)
 		
@@ -248,6 +248,14 @@ func areNPC(tile):
 
 func update_dialogue(n):
 	npc=n
-	Global.npc_face.play(npc.get_custom_data("npc_name"))
-	Global.npc_text.text=Global.npcdialogues[npc.get_custom_data("npc_name")][npc.get_custom_data("npc_say")]
+	if Global.npcdialogues[npc.get_custom_data("npc_name")][npc.get_custom_data("npc_say")] is Array:
+		Global.in_dialogue=false
+		Global.npc_face.get_parent().visible=Global.in_dialogue
+		pausedmovement=Global.in_dialogue
+		Global.nav.start_path(Global.npcdialogues[npc.get_custom_data("npc_name")][npc.get_custom_data("npc_say")])
+		npc.set_custom_data("npc_say",npc.get_custom_data("npc_say")+1)
+		Global.npclimits[npc.get_custom_data("npc_name")][0]=npc.get_custom_data("npc_say")
+	else: 
+		Global.npc_face.play(npc.get_custom_data("npc_name"))
+		Global.npc_text.text=Global.npcdialogues[npc.get_custom_data("npc_name")][npc.get_custom_data("npc_say")]
 	resetPosition()
