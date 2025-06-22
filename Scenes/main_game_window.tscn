@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://ddgevhewlju2f"]
+[gd_scene load_steps=8 format=3 uid="uid://ddgevhewlju2f"]
 
 [ext_resource type="Texture2D" uid="uid://dent3jv8hfurt" path="res://Assets/dialogue_box.png" id="1_o2wgm"]
 [ext_resource type="SpriteFrames" uid="uid://ceaxapquj3vdl" path="res://Assets/Spriteframes/npc_faces.tres" id="2_o2wgm"]
 [ext_resource type="FontFile" uid="uid://dlhcpwqyhdqy1" path="res://Assets/Fonts/depixel/DePixelHalbfett.ttf" id="3_myh3n"]
+[ext_resource type="Texture2D" uid="uid://sfyqat5dueb5" path="res://Assets/kenney_tiny-town/Tiles/tile_0117.png" id="4_wlahx"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_wlahx"]
 font = ExtResource("3_myh3n")
@@ -12,6 +13,11 @@ font_color = Color(0, 0, 0, 1)
 [sub_resource type="LabelSettings" id="LabelSettings_jrl71"]
 font_size = 40
 font_color = Color(1, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_3ka4d"]
+font_size = 50
+outline_size = 25
+outline_color = Color(0.247059, 0.14902, 0.192157, 1)
 
 [node name="Main Game Window" type="Control" groups=["Main"]]
 layout_mode = 3
@@ -62,5 +68,29 @@ grow_horizontal = 0
 text = "0"
 label_settings = SubResource("LabelSettings_jrl71")
 horizontal_alignment = 2
+
+[node name="Keys" type="Sprite2D" parent="CanvasLayer" groups=["keys_sprite"]]
+position = Vector2(31, 420)
+rotation = -1.5708
+scale = Vector2(-3, 3)
+texture = ExtResource("4_wlahx")
+
+[node name="Control" type="Control" parent="CanvasLayer/Keys"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(0.2, 0.2)
+
+[node name="Label" type="Label" parent="CanvasLayer/Keys/Control" groups=["keys_text"]]
+texture_filter = 2
+offset_left = -20.0
+offset_top = 36.6665
+offset_right = 36.0
+offset_bottom = 105.667
+rotation = 1.5708
+scale = Vector2(1, -1)
+text = "x2"
+label_settings = SubResource("LabelSettings_3ka4d")
 
 [node name="Map" type="Node2D" parent="."]

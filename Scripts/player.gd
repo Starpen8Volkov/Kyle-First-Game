@@ -162,7 +162,12 @@ func are_dynamic(body, area):
 
 func interact(area):
 	if dynamics.any(areDoor):
-		if area.get_overlapping_bodies().any(areClosedDoor):
+		print(dynamics, dynamics.any(areLockedDoor),dynamics[0].get_custom_data("locked_door"))
+		if area.get_overlapping_bodies().any(areLockedDoor.bind(area)):
+			if Global.keys>0:
+				Global.addKeys(-1)
+				Global.door.set_cell(Vector2i((area.global_position-(Global.tileSize/2))/Global.tileSize),1,Vector2i(1,7))
+		elif area.get_overlapping_bodies().any(areClosedDoor):
 			Global.door.erase_cell(Vector2i((area.global_position-(Global.tileSize/2))/Global.tileSize))
 		else:
 			Global.door.set_cell(Vector2i((area.global_position-(Global.tileSize/2))/Global.tileSize),1,Vector2i(1,7))
@@ -201,6 +206,12 @@ func areDoor(tile):
 		return tile.get_custom_data("door")
 	return false 
 	
+func areLockedDoor(body, area):
+	if Global.door==body:
+		var tile=body.get_cell_tile_data((Vector2i((area.global_position-(Global.tileSize/2))/Global.tileSize)))
+		return tile.get_custom_data("locked_door")
+	return false 
+
 func areSign(tile):
 	if tile!=null:
 		return tile.get_custom_data("sign")

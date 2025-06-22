@@ -48,6 +48,8 @@ var npclimits={
 }
 var nav
 var keys=0
+var keys_sprite
+var keys_text
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -64,7 +66,7 @@ func _process(_delta):
 
 
 func keyCollected():
-	keys+=1
+	addKeys(1)
 	print("Key Collected, Current Amount of Keys is: "+str(keys))
 
 func coinCollected():
@@ -107,7 +109,12 @@ func loadmap(l, map, pos=null, dir=null):
 	solid_dynamic = get_tree().get_nodes_in_group("solid_dynamic")[-1]
 	npc_face = get_tree().get_first_node_in_group("npc_face")
 	npc_text = get_tree().get_first_node_in_group("npc_text")
+	keys_sprite = get_tree().get_first_node_in_group("keys_sprite")
+	keys_text = get_tree().get_first_node_in_group("keys_text")
 	nav = get_tree().get_nodes_in_group("nav")[-1]
+	
+	keys_sprite.visible=false
+	keys_text.visible=false
 	
 	if pos!=null:
 		Player.position=pos
@@ -120,3 +127,12 @@ func loadmap(l, map, pos=null, dir=null):
 func deleteOldmap():
 	var Oldmap=main.get_node("Map").get_child(0)
 	Oldmap.queue_free()
+
+func addKeys(i):
+	keys+=i
+	if keys==1:
+		keys_sprite.visible=true
+		keys_text.visible=false
+	else:
+		keys_text.visible=true
+		keys_text.text="x"+str(keys)

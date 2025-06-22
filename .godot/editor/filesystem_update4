@@ -1,13 +1,11 @@
 res://Scenes/House Indoor.tscn
 res://Assets/Tilesets/overworld.tres
 res://Assets/Spriteframes/player_frames.tres
+res://Scripts/global.gd
 res://Scenes/player.tscn
 res://Scenes/map1.tscn
 res://Scenes/key.tscn
 res://Scenes/main_game_window.tscn
 res://Scenes/npc_nav.tscn
-res://Scripts/npc.gd
-res://Scripts/global.gd
-res://Scripts/player.gd
 res://Scenes/coin.tscn
-res://Scripts/coin.gd
+res://Scripts/player.gd

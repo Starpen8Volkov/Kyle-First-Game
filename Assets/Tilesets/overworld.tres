@@ -1,9 +1,10 @@
-[gd_resource type="TileSet" load_steps=9 format=3 uid="uid://bfngyo5hq7mo6"]
+[gd_resource type="TileSet" load_steps=11 format=3 uid="uid://bfngyo5hq7mo6"]
 
 [ext_resource type="Texture2D" uid="uid://cgkmfrxvi155f" path="res://Assets/kenney_tiny-town/Tilemap/additional_tileset.png" id="1_71a33"]
 [ext_resource type="Texture2D" uid="uid://2qb2kj86el1m" path="res://Assets/kenney_tiny-town/Tilemap/tilemap_packed.png" id="2_ves6g"]
 [ext_resource type="Texture2D" uid="uid://xftcysfad0bk" path="res://Assets/kenney_tiny-town/Tilemap/doors.png" id="3_1uqb0"]
 [ext_resource type="Texture2D" uid="uid://depgfjhqhe0u3" path="res://Assets/kenney_roguelike-characters/Spritesheet/roguelikeChar_transparent.png" id="4_0ucv8"]
+[ext_resource type="Texture2D" uid="uid://b6p3bdttipl5e" path="res://Assets/Locked Door.png" id="5_fd47t"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_8uniu"]
 texture = ExtResource("1_71a33")
@@ -990,6 +991,12 @@ separation = Vector2i(1, 1)
 2:11/0 = 0
 20:11/0 = 0
 
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7la8m"]
+texture = ExtResource("5_fd47t")
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+0:0/0/custom_data_10 = true
+
 [resource]
 physics_layer_0/collision_layer = 5
 physics_layer_0/collision_mask = 5
@@ -1015,7 +1022,10 @@ custom_data_layer_8/name = "npc_name"
 custom_data_layer_8/type = 4
 custom_data_layer_9/name = "npc_say"
 custom_data_layer_9/type = 2
+custom_data_layer_10/name = "locked_door"
+custom_data_layer_10/type = 1
 sources/1 = SubResource("TileSetAtlasSource_q1ed4")
 sources/0 = SubResource("TileSetAtlasSource_8uniu")
 sources/2 = SubResource("TileSetAtlasSource_0ucv8")
 sources/3 = SubResource("TileSetAtlasSource_fd47t")
+sources/4 = SubResource("TileSetAtlasSource_7la8m")

@@ -143,11 +143,10 @@ offset_right = 8.0
 offset_bottom = 8.0
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
-polygon = PackedVector2Array(-7, -6, 7, -6, 7, 6, -7, 6)
+polygon = PackedVector2Array(-8.00003, -5.99996, 7.99997, -6.00004, 8.00003, 5.99996, -7.99997, 6.00004)
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(3.27826e-07, 0)
-scale = Vector2(0.875, 1)
 texture = ExtResource("1_8qcjs")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
