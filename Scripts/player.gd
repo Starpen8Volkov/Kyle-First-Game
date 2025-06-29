@@ -27,6 +27,9 @@ var signOnScreen=false
 var dynamics=[]
 var pausedmovement=false
 var npc
+var joystick_axis=Vector2()
+var joystick_last_dir = "left"
+var joystick_center=false
 
 func _physics_process(_delta):
 	pass
@@ -64,27 +67,35 @@ func _process(_delta):
 		var directionY = Input.get_axis("Player_Up","Player_Down")
 		
 		if !pausedmovement:
-			if Input.is_action_just_pressed("Player_Up"):
-				lastDir="top"
-			if Input.is_action_just_pressed("Player_Right"):
-				lastDir="right"
-			if Input.is_action_just_pressed("Player_Down"):
-				lastDir="bottom"
-			if Input.is_action_just_pressed("Player_Left"):
-				lastDir="left"
+			var dX=directionX
+			var dY=directionY
 			
-			if directionX!=null && toMove.x==0:
+			if joystick_axis:
+				lastDir=joystick_last_dir
+				dX=joystick_axis.x
+				dY=joystick_axis.y
+			else:
+				if Input.is_action_just_pressed("Player_Up"):
+					lastDir="top"
+				if Input.is_action_just_pressed("Player_Right"):
+					lastDir="right"
+				if Input.is_action_just_pressed("Player_Down"):
+					lastDir="bottom"
+				if Input.is_action_just_pressed("Player_Left"):
+					lastDir="left"
+			
+			if dX!=null and toMove.x==0:
 				if lastDir=="left" or lastDir=="right":
-					toMove=Vector2((Global.tileSize.x)*directionX,0)
-			if directionY!=null && toMove.y==0:
+					toMove=Vector2((Global.tileSize.x)*dX,0)
+			if dY!=null and toMove.y==0:
 				if lastDir=="top" or lastDir=="bottom":
-					toMove=Vector2(0,(Global.tileSize.y)*directionY)
+					toMove=Vector2(0,(Global.tileSize.y)*dY)
 		else:
-			if Input.is_action_just_pressed("Player_Right") or Input.is_action_just_pressed("Player_Down"):
+			if Input.is_action_just_pressed("Player_Right") or Input.is_action_just_pressed("Player_Down") or joystick_axis.x>0 or joystick_axis.y>0:
 				if npc.get_custom_data("npc_say")<Global.npclimits[npc.get_custom_data("npc_name")][1]:
 					npc.set_custom_data("npc_say",npc.get_custom_data("npc_say")+1)
 					update_dialogue(npc)
-			if Input.is_action_just_pressed("Player_Left") or Input.is_action_just_pressed("Player_Up"):
+			if Input.is_action_just_pressed("Player_Left") or Input.is_action_just_pressed("Player_Up") or joystick_axis.x<0 or joystick_axis.y<0:
 				if npc.get_custom_data("npc_say")>Global.npclimits[npc.get_custom_data("npc_name")][0]:
 					npc.set_custom_data("npc_say",npc.get_custom_data("npc_say")-1)
 					update_dialogue(npc)
@@ -95,7 +106,7 @@ func _process(_delta):
 			$ButtonE.position=Tiledirections[lastDir]*10
 			$ButtonE.start(true)
 			interactable=true
-			if Input.is_action_just_pressed("Interact"):
+			if Input.is_action_just_pressed("Interact") or joystick_center:
 				interact(collisionAreas[lastDir])
 		else:
 			$ButtonE.start(false)

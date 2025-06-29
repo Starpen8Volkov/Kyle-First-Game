@@ -1,9 +1,10 @@
-[gd_scene load_steps=8 format=3 uid="uid://ddgevhewlju2f"]
+[gd_scene load_steps=9 format=3 uid="uid://ddgevhewlju2f"]
 
 [ext_resource type="Texture2D" uid="uid://dent3jv8hfurt" path="res://Assets/dialogue_box.png" id="1_o2wgm"]
 [ext_resource type="SpriteFrames" uid="uid://ceaxapquj3vdl" path="res://Assets/Spriteframes/npc_faces.tres" id="2_o2wgm"]
 [ext_resource type="FontFile" uid="uid://dlhcpwqyhdqy1" path="res://Assets/Fonts/depixel/DePixelHalbfett.ttf" id="3_myh3n"]
 [ext_resource type="Texture2D" uid="uid://sfyqat5dueb5" path="res://Assets/kenney_tiny-town/Tiles/tile_0117.png" id="4_wlahx"]
+[ext_resource type="PackedScene" uid="uid://crmv2bp8qsqj7" path="res://Scenes/joystick.tscn" id="5_3ka4d"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_wlahx"]
 font = ExtResource("3_myh3n")
@@ -93,5 +94,12 @@ rotation = 1.5708
 scale = Vector2(1, -1)
 text = "x2"
 label_settings = SubResource("LabelSettings_3ka4d")
+
+[node name="Joystick" parent="CanvasLayer" instance=ExtResource("5_3ka4d")]
+offset_left = 700.0
+offset_top = 350.0
+offset_right = -100.0
+offset_bottom = -98.0
+scale = Vector2(2, 2)
 
 [node name="Map" type="Node2D" parent="."]

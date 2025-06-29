@@ -1,7 +1,10 @@
-[gd_scene load_steps=3 format=3 uid="uid://crmv2bp8qsqj7"]
+[gd_scene load_steps=6 format=3 uid="uid://crmv2bp8qsqj7"]
 
 [ext_resource type="Texture2D" uid="uid://ckij6oyv3iars" path="res://Assets/Arrow Grey.png" id="1_ccjgu"]
 [ext_resource type="Texture2D" uid="uid://cmgt82522seko" path="res://Assets/Arrow.png" id="1_f3s6d"]
+[ext_resource type="Script" uid="uid://b221vku64n0tv" path="res://Scenes/joystick.gd" id="1_uvkn4"]
+[ext_resource type="Texture2D" uid="uid://dxc31wb5idyq1" path="res://Assets/CenterGrey.png" id="4_4h880"]
+[ext_resource type="Texture2D" uid="uid://dp5xlod8vg42o" path="res://Assets/Center.png" id="5_txiae"]
 
 [node name="Joystick" type="Control"]
 layout_mode = 3
@@ -10,10 +13,57 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_uvkn4")
 
-[node name="TextureButton" type="TextureButton" parent="."]
+[node name="Up" type="TextureButton" parent="."]
+texture_filter = 1
 layout_mode = 0
-offset_right = 25.0
-offset_bottom = 25.0
+offset_left = -13.0
+offset_top = -38.0
+offset_right = 13.0
+offset_bottom = -12.0
 texture_normal = ExtResource("1_ccjgu")
 texture_pressed = ExtResource("1_f3s6d")
+
+[node name="Down" type="TextureButton" parent="."]
+texture_filter = 1
+layout_mode = 0
+offset_left = 12.0
+offset_top = 37.0
+offset_right = 38.0
+offset_bottom = 63.0
+rotation = 3.14159
+texture_normal = ExtResource("1_ccjgu")
+texture_pressed = ExtResource("1_f3s6d")
+
+[node name="Left" type="TextureButton" parent="."]
+texture_filter = 1
+layout_mode = 0
+offset_left = -38.0
+offset_top = 12.0
+offset_right = -12.0
+offset_bottom = 38.0
+rotation = 4.71239
+texture_normal = ExtResource("1_ccjgu")
+texture_pressed = ExtResource("1_f3s6d")
+
+[node name="Right" type="TextureButton" parent="."]
+texture_filter = 1
+layout_mode = 0
+offset_left = 37.0
+offset_top = -13.0
+offset_right = 63.0
+offset_bottom = 13.0
+rotation = 1.5708
+texture_normal = ExtResource("1_ccjgu")
+texture_pressed = ExtResource("1_f3s6d")
+
+[node name="Center" type="TextureButton" parent="."]
+texture_filter = 1
+layout_mode = 0
+offset_left = -13.0
+offset_top = -13.0
+offset_right = 13.0
+offset_bottom = 13.0
+texture_normal = ExtResource("4_4h880")
+texture_pressed = ExtResource("5_txiae")

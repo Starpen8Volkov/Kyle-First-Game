@@ -1,15 +1,12 @@
-res://Scenes/House Indoor.tscn
+res://Scenes/joystick.tscn
 res://Assets/Tilesets/overworld.tres
 res://Assets/Spriteframes/player_frames.tres
+res://Scenes/joystick.gd
+res://Scenes/main_game_window.tscn
+res://Scenes/House Indoor.tscn
 res://Scenes/player.tscn
 res://Scenes/map1.tscn
 res://Scenes/key.tscn
-res://Scenes/main_game_window.tscn
 res://Scenes/npc_nav.tscn
 res://Scenes/coin.tscn
-res://Scripts/global.gd
 res://Scripts/player.gd
-res://Scripts/npc.gd
-res://Scripts/coin.gd
-res://Scripts/key.gd
-res://Scenes/joystick.tscn
