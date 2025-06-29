@@ -3,6 +3,7 @@ extends Area2D
 var speed=1.2
 var rot_speed=1.2
 var final_rot=1080
+var killed=false
 
 func _on_body_entered(body):
 	if body.is_in_group("player"):
@@ -10,13 +11,14 @@ func _on_body_entered(body):
 		delete()
 
 func delete():
+	killed=true
 	$AnimationPlayer.play("RESET")
 	$AnimationPlayer.play("delete")
 	$Timer.wait_time=$AnimationPlayer.current_animation_length
 	$Timer.start()
 
 func _on_timer_timeout() -> void:
-	queue_free()
+	Global.purge("items", self)
 
 func enter(bag, pos):
 	$CollisionPolygon2D.disabled=true

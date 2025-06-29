@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=4 uid="uid://b2vs7ebnbx2co"]
+[gd_scene load_steps=4 format=4 uid="uid://b2vs7ebnbx2co"]
 
 [ext_resource type="TileSet" uid="uid://bfngyo5hq7mo6" path="res://Assets/Tilesets/overworld.tres" id="1_xebma"]
 [ext_resource type="PackedScene" uid="uid://bjv117g4u3uxn" path="res://Scenes/player.tscn" id="2_18hui"]
+[ext_resource type="PackedScene" uid="uid://gdbtte4q0cl7" path="res://Scenes/npc_nav.tscn" id="3_18hui"]
 
 [node name="Map 1" type="Node2D" groups=["map"]]
 
@@ -70,3 +71,11 @@ limit_right = 212
 limit_bottom = 128
 
 [node name="Player" parent="." instance=ExtResource("2_18hui")]
+
+[node name="Paths" type="Node2D" parent="."]
+position = Vector2(0, -1)
+
+[node name="NPC Nav" parent="Paths" groups=["nav"] instance=ExtResource("3_18hui")]
+visible = false
+position = Vector2(96, 177)
+rotation = -0.0264175

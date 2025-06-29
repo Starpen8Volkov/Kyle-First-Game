@@ -162,7 +162,6 @@ func are_dynamic(body, area):
 
 func interact(area):
 	if dynamics.any(areDoor):
-		print(dynamics, dynamics.any(areLockedDoor),dynamics[0].get_custom_data("locked_door"))
 		if area.get_overlapping_bodies().any(areLockedDoor.bind(area)):
 			if Global.keys>0:
 				Global.addKeys(-1)

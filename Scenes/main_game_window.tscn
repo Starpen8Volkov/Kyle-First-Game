@@ -84,6 +84,7 @@ scale = Vector2(0.2, 0.2)
 
 [node name="Label" type="Label" parent="CanvasLayer/Keys/Control" groups=["keys_text"]]
 texture_filter = 2
+layout_mode = 0
 offset_left = -20.0
 offset_top = 36.6665
 offset_right = 36.0

@@ -130,7 +130,7 @@ _data = {
 &"idle": SubResource("Animation_lc1k7")
 }
 
-[node name="Key" type="Area2D"]
+[node name="Key" type="Area2D" groups=["item"]]
 z_index = -1
 rotation = 6.28319
 script = ExtResource("1_udxw8")

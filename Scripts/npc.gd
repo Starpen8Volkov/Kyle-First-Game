@@ -54,3 +54,14 @@ func start_path(arr):
 			points.append(p)
 			curve.curve.set_point_position(i,p)
 		position=points[progress]
+
+func finish():
+	if running:
+		position=points[-1]
+		if previous_tile!=null:
+			Global.solid_dynamic.set_cell(previous_tile[0], previous_tile[1], previous_tile[2])
+		
+		#print(points[progress])
+		var p=(((position/Global.tileSize).round()*Global.tileSize)-(Global.tileSize/2))/Global.tileSize
+		previous_tile=[p,Global.solid_dynamic.get_cell_source_id(p),Global.solid_dynamic.get_cell_atlas_coords(p)]
+		Global.solid_dynamic.set_cell(p,npc[0],npc[1])

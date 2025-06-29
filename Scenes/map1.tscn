@@ -87,7 +87,7 @@ position = Vector2(96, 177)
 rotation = -0.0264175
 
 [node name="Player" parent="." instance=ExtResource("2_cc8cj")]
-position = Vector2(511, 122)
+position = Vector2(160, 232)
 metadata/Direction = "down"
 
 [node name="Key" parent="." instance=ExtResource("3_me8s6")]

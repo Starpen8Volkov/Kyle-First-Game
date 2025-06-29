@@ -50,6 +50,12 @@ var nav
 var keys=0
 var keys_sprite
 var keys_text
+var progress={
+	"maps":{
+		
+	}
+}
+var items
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -57,6 +63,12 @@ func _ready():
 		"key": preload("res://Scenes/key.tscn"),
 		"coin": preload("res://Scenes/coin.tscn")
 	}
+	npc_face = get_tree().get_first_node_in_group("npc_face")
+	npc_text = get_tree().get_first_node_in_group("npc_text")
+	keys_sprite = get_tree().get_first_node_in_group("keys_sprite")
+	keys_text = get_tree().get_first_node_in_group("keys_text")
+	keys_sprite.visible=false
+	keys_text.visible=false
 	loadmap(true, Mapname)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -91,12 +103,16 @@ func loadmap(l, map, pos=null, dir=null):
 	main=get_tree().get_first_node_in_group("Main")
 	if l:
 		#get_tree().change_scene_to_file("res://Scenes/map"+str(m)+".tscn")
-		Mapname=map
-		var newMap=load("res://Scenes/"+str(map)+".tscn")
+		var newMap
+		if progress["maps"].has(map):
+			newMap=progress["maps"][map]
+		else:
+			newMap=load("res://Scenes/"+str(map)+".tscn")
 		newMap=newMap.instantiate()
 		if main.get_node("Map").get_child_count()>0:
-			deleteOldmap()
+			deleteOldmap(Mapname)
 		main.get_node("Map").add_child(newMap)
+		Mapname=map
 	
 	Map=get_tree().get_nodes_in_group("map")[-1]
 	Player=get_tree().get_nodes_in_group("player")[-1]
@@ -107,14 +123,8 @@ func loadmap(l, map, pos=null, dir=null):
 	dynamics = get_tree().get_nodes_in_group("dynamic")
 	door = get_tree().get_nodes_in_group("door")[-1]
 	solid_dynamic = get_tree().get_nodes_in_group("solid_dynamic")[-1]
-	npc_face = get_tree().get_first_node_in_group("npc_face")
-	npc_text = get_tree().get_first_node_in_group("npc_text")
-	keys_sprite = get_tree().get_first_node_in_group("keys_sprite")
-	keys_text = get_tree().get_first_node_in_group("keys_text")
 	nav = get_tree().get_nodes_in_group("nav")[-1]
-	
-	keys_sprite.visible=false
-	keys_text.visible=false
+	items = get_tree().get_nodes_in_group("item")
 	
 	if pos!=null:
 		Player.position=pos
@@ -124,15 +134,32 @@ func loadmap(l, map, pos=null, dir=null):
 	changingScenes=false
 	#generateKeys(15)
 
-func deleteOldmap():
+func deleteOldmap(m):
+	for i in items:
+		if is_instance_valid(i):
+			if i.killed:
+				purge("items", i)
+	nav.finish()
 	var Oldmap=main.get_node("Map").get_child(0)
+	var packed_map=PackedScene.new()
+	packed_map.pack(Oldmap)
+	progress["maps"][m]=packed_map
 	Oldmap.queue_free()
 
 func addKeys(i):
 	keys+=i
-	if keys==1:
+	if keys<=0:
+		keys_sprite.visible=false
+		keys_text.visible=false
+	elif keys==1:
 		keys_sprite.visible=true
 		keys_text.visible=false
 	else:
+		keys_sprite.visible=true
 		keys_text.visible=true
 		keys_text.text="x"+str(keys)
+
+func purge(array, item):
+	if self[array].has(item):
+		self[array].erase(item)
+		item.queue_free()

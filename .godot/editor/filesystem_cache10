@@ -1,13 +1,15 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1750582740
+::res://::1751187662
 export_presets.cfg::TextFile/TextFile::-1::1744363646::0::1::::<><><>0<>0<><>::
 icon.svg::CompressedTexture2D/CompressedTexture2D::1645368062317874776::1743151221::1743151221::1::::<><><>0<>0<>bd45657a9432b8db1fe003a1354a9540<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
 README.md::TextFile/TextFile::-1::1743151221::0::1::::<><><>0<>0<><>::
-::res://Assets/::1750584098
+::res://Assets/::1751193329
+Arrow Grey.png::CompressedTexture2D::5491847411739038452::1751193329::1751193333::1::::<><><>0<>0<>faeba93fbd3fa2ebda084750efff5ae7<>res://.godot/imported/Arrow Grey.png-f1da03eb41708cce69db3fe7b5feb88b.ctex::
+Arrow.png::CompressedTexture2D::5628707777366510098::1751193129::1751193134::1::::<><><>0<>0<>510261ed2d0ef7a522a5a67f35ec6f3c<>res://.godot/imported/Arrow.png-b8e6da00c37ab648b87d046a161ddee5.ctex::
 coin.png::CompressedTexture2D/CompressedTexture2D::2093798038489402292::1743151221::1749982985::1::::<><><>0<>0<>7a4fd830ab252e82ad75d6d375641ef9<>res://.godot/imported/coin.png-23e506fc535e1e81a67b247520f1351a.ctex::
 dialogue_box.png::CompressedTexture2D/CompressedTexture2D::7468058468186097309::1748170656::1748170656::1::::<><><>0<>0<>3d819bd1ae00b19c4a2dd43a22bcee62<>res://.godot/imported/dialogue_box.png-44428d683d811a011da29d134c2a81ea.ctex::
 largeSign.png::CompressedTexture2D/CompressedTexture2D::6675866914018863612::1746610918::1746960853::1::::<><><>0<>0<>aaa17cb5d293ec06a772148ed80d17c4<>res://.godot/imported/largeSign.png-4021c99880ca7a11e2397d9c2b27e81b.ctex::
-Locked Door.png::CompressedTexture2D::4594942552170268868::1750584098::1750584104::1::::<><><>0<>0<>4b395f7c296d1b85810005fe9462cb35<>res://.godot/imported/Locked Door.png-6de790ac538e115fc2301f25c61ea21a.ctex::
+Locked Door.png::CompressedTexture2D/CompressedTexture2D::4594942552170268868::1750584098::1750584104::1::::<><><>0<>0<>4b395f7c296d1b85810005fe9462cb35<>res://.godot/imported/Locked Door.png-6de790ac538e115fc2301f25c61ea21a.ctex::
 pixil-frame-0.png::CompressedTexture2D/CompressedTexture2D::4899033347812333834::1744195427::1744195482::1::::<><><>0<>0<>ce84aa87cac8404c0567a4ec9dfb8d4b<>res://.godot/imported/pixil-frame-0.png-1e2e14a6fca0ab207413f8785ae4b7df.ctex::
 sign tile.png::CompressedTexture2D/CompressedTexture2D::6726233538961728358::1743151221::1746354372::1::::<><><>0<>0<>01715511472ad0cea4f52ee8c64d1275<>res://.godot/imported/sign tile.png-40e3b4bff8dc703db1e99a128436c46d.ctex::
 ::res://Assets/Fonts/::1748427009
@@ -434,29 +436,30 @@ tile_0130.png::CompressedTexture2D/CompressedTexture2D::3860064071538338977::174
 tile_0131.png::CompressedTexture2D/CompressedTexture2D::3239235357794769900::1743151221::1743151221::1::::<><><>0<>0<>d190823fc42badf76d7a770157f720ee<>res://.godot/imported/tile_0131.png-a669131d34de126f8b92eb3fb9c5be96.ctex::
 ::res://Assets/NPCs/::1748170656
 Jeff.png::CompressedTexture2D/CompressedTexture2D::6100539219818993761::1748170656::1748170656::1::::<><><>0<>0<>169c9e39957e439103f4bcf05126ec45<>res://.godot/imported/Jeff.png-3bbda57f08ad0b01fc379c37191e21e4.ctex::
-::res://Assets/Spriteframes/::1750582834
+::res://Assets/Spriteframes/::1751187672
 npc_faces.tres::SpriteFrames/SpriteFrames::5054994046260943541::1748170656::0::1::::<><><>0<>0<><>::uid://cs6e8wbhtmjh6::::res://Assets/NPCs/Jeff.png
-player_frames.tres::SpriteFrames::6850214824731276872::1750582834::0::1::::<><><>0<>0<><>::uid://cvel6ngwpliil::::res://Assets/kenney_sokoban-pack/Tilesheet/top-down-character-front.png<>uid://bvoxdmafir0k0::::res://Assets/kenney_sokoban-pack/Tilesheet/top-down-character-left.png<>uid://dica4jl3hnuya::::res://Assets/kenney_sokoban-pack/Tilesheet/top-down-character-right.png<>uid://wv7ld5j8kq5q::::res://Assets/kenney_sokoban-pack/Tilesheet/top-down-character-back.png
-::res://Assets/Tilesets/::1750582834
-overworld.tres::TileSet::2764609755708092299::1750582834::0::1::::<><><>0<>0<><>::uid://cgkmfrxvi155f::::res://Assets/kenney_tiny-town/Tilemap/additional_tileset.png<>uid://2qb2kj86el1m::::res://Assets/kenney_tiny-town/Tilemap/tilemap_packed.png<>uid://xftcysfad0bk::::res://Assets/kenney_tiny-town/Tilemap/doors.png<>uid://depgfjhqhe0u3::::res://Assets/kenney_roguelike-characters/Spritesheet/roguelikeChar_transparent.png
+player_frames.tres::SpriteFrames::6850214824731276872::1751187672::0::1::::<><><>0<>0<><>::uid://cvel6ngwpliil::::res://Assets/kenney_sokoban-pack/Tilesheet/top-down-character-front.png<>uid://bvoxdmafir0k0::::res://Assets/kenney_sokoban-pack/Tilesheet/top-down-character-left.png<>uid://dica4jl3hnuya::::res://Assets/kenney_sokoban-pack/Tilesheet/top-down-character-right.png<>uid://wv7ld5j8kq5q::::res://Assets/kenney_sokoban-pack/Tilesheet/top-down-character-back.png
+::res://Assets/Tilesets/::1751187672
+overworld.tres::TileSet::2764609755708092299::1751187672::0::1::::<><><>0<>0<><>::uid://cgkmfrxvi155f::::res://Assets/kenney_tiny-town/Tilemap/additional_tileset.png<>uid://2qb2kj86el1m::::res://Assets/kenney_tiny-town/Tilemap/tilemap_packed.png<>uid://xftcysfad0bk::::res://Assets/kenney_tiny-town/Tilemap/doors.png<>uid://depgfjhqhe0u3::::res://Assets/kenney_roguelike-characters/Spritesheet/roguelikeChar_transparent.png<>uid://b6p3bdttipl5e::::res://Assets/Locked Door.png
 ::res://Exports/::1744363646
-::res://Scenes/::1750582834
-coin.tscn::PackedScene::6998768536681585175::1750582834::0::1::::<><><>0<>0<><>::uid://ih0712fkdf5i::::res://Scripts/coin.gd<>uid://43isvigogu5y::::res://Assets/coin.png
+::res://Scenes/::1751193232
+coin.tscn::PackedScene::6998768536681585175::1751192063::0::1::::<><><>0<>0<><>::uid://ih0712fkdf5i::::res://Scripts/coin.gd<>uid://43isvigogu5y::::res://Assets/coin.png
 Dynamic Notification.tscn::PackedScene/PackedScene::2981474428495062412::1747563575::0::1::::<><><>0<>0<><>::uid://cb2emmginrhpy::::res://Assets/pixil-frame-0.png<>uid://pp3pwx806lmk::::res://Scripts/dynamic_notification.gd
-House Indoor.tscn::PackedScene::4326021658261120870::1750582834::0::1::::<><><>0<>0<><>::uid://bfngyo5hq7mo6::::res://Assets/Tilesets/overworld.tres<>uid://bjv117g4u3uxn::::res://Scenes/player.tscn
-key.tscn::PackedScene::3276813949458316704::1750582834::0::1::::<><><>0<>0<><>::uid://sfyqat5dueb5::::res://Assets/kenney_tiny-town/Tiles/tile_0117.png<>uid://di3efh5iy7lnw::::res://Scripts/key.gd
+House Indoor.tscn::PackedScene::4326021658261120870::1751192062::0::1::::<><><>0<>0<><>::uid://bfngyo5hq7mo6::::res://Assets/Tilesets/overworld.tres<>uid://bjv117g4u3uxn::::res://Scenes/player.tscn<>uid://gdbtte4q0cl7::::res://Scenes/npc_nav.tscn
+key.tscn::PackedScene::3276813949458316704::1751192062::0::1::::<><><>0<>0<><>::uid://sfyqat5dueb5::::res://Assets/kenney_tiny-town/Tiles/tile_0117.png<>uid://di3efh5iy7lnw::::res://Scripts/key.gd
 level template.tscn::PackedScene/PackedScene::3945507047333975065::1748170656::0::1::::<><><>0<>0<><>::uid://bfngyo5hq7mo6::::res://Assets/Tilesets/overworld.tres<>uid://bjv117g4u3uxn::::res://Scenes/player.tscn
-main_game_window.tscn::PackedScene::7382495593018153123::1750582834::0::1::::<><><>0<>0<><>::uid://dent3jv8hfurt::::res://Assets/dialogue_box.png<>uid://ceaxapquj3vdl::::res://Assets/Spriteframes/npc_faces.tres<>uid://dlhcpwqyhdqy1::::res://Assets/Fonts/depixel/DePixelHalbfett.ttf
-map1.tscn::PackedScene::1210959119922974517::1750582834::0::1::::<><><>0<>0<><>::uid://bfngyo5hq7mo6::::res://Assets/Tilesets/overworld.tres<>uid://bjv117g4u3uxn::::res://Scenes/player.tscn<>uid://gdbtte4q0cl7::::res://Scenes/npc_nav.tscn<>uid://bmxkv86wfa20s::::res://Scenes/key.tscn
-npc_nav.tscn::PackedScene::427421847630197510::1750582834::0::1::::<><><>0<>0<><>::uid://7gd48t6phmvq::::res://Scripts/npc.gd
-player.tscn::PackedScene::3063098973085612715::1750582834::0::1::::<><><>0<>0<><>::uid://t8hkijt1fwsf::::res://Scripts/player.gd<>uid://c4ukbjfnk438o::::res://Assets/Spriteframes/player_frames.tres<>uid://biqipiftf7elw::::res://Scenes/Dynamic Notification.tscn<>uid://20l7kqs32maf::::res://Scenes/sign.tscn
+main_game_window.tscn::PackedScene::7382495593018153123::1751192062::0::1::::<><><>0<>0<><>::uid://dent3jv8hfurt::::res://Assets/dialogue_box.png<>uid://ceaxapquj3vdl::::res://Assets/Spriteframes/npc_faces.tres<>uid://dlhcpwqyhdqy1::::res://Assets/Fonts/depixel/DePixelHalbfett.ttf<>uid://sfyqat5dueb5::::res://Assets/kenney_tiny-town/Tiles/tile_0117.png
+map1.tscn::PackedScene::1210959119922974517::1751192062::0::1::::<><><>0<>0<><>::uid://bfngyo5hq7mo6::::res://Assets/Tilesets/overworld.tres<>uid://bjv117g4u3uxn::::res://Scenes/player.tscn<>uid://gdbtte4q0cl7::::res://Scenes/npc_nav.tscn<>uid://bmxkv86wfa20s::::res://Scenes/key.tscn
+npc_nav.tscn::PackedScene::427421847630197510::1751192063::0::1::::<><><>0<>0<><>::uid://7gd48t6phmvq::::res://Scripts/npc.gd
+player.tscn::PackedScene::3063098973085612715::1751192062::0::1::::<><><>0<>0<><>::uid://t8hkijt1fwsf::::res://Scripts/player.gd<>uid://c4ukbjfnk438o::::res://Assets/Spriteframes/player_frames.tres<>uid://biqipiftf7elw::::res://Scenes/Dynamic Notification.tscn<>uid://20l7kqs32maf::::res://Scenes/sign.tscn
+joystick.tscn::PackedScene::5992147592781890946::1751193232::0::1::::<><><>0<>0<><>::uid://cmgt82522seko::::res://Assets/Arrow.png
 sign.tscn::PackedScene/PackedScene::1947433805210458765::1747563575::0::1::::<><><>0<>0<><>::uid://c2d3s17alh8tk::::res://Assets/largeSign.png
-::res://Scripts/::1750582834
-coin.gd::GDScript::577537871164283952::1749983012::0::1::::<>Area2D<><>0<>0<><>::
+::res://Scripts/::1751192062
+coin.gd::GDScript::577537871164283952::1751191744::0::1::::<>Area2D<><>0<>0<><>::
 dynamic_notification.gd::GDScript/GDScript::1085526376165630518::1744975465::0::1::::<>Sprite2D<><>0<>0<><>::
-global.gd::GDScript::2334710923513551609::1750582834::0::1::::<>Node<><>0<>0<><>::
-key.gd::GDScript/GDScript::7778827588642236156::1748170656::0::1::::<>Area2D<><>0<>0<><>::
-npc.gd::GDScript::2258664965993607890::1749981982::0::1::::<>Node2D<><>0<>0<><>::
-player.gd::GDScript::1402155806883283369::1749980821::0::1::::<>CharacterBody2D<><>0<>0<><>::
+global.gd::GDScript::2334710923513551609::1751192062::0::1::::<>Node<><>0<>0<><>::
+key.gd::GDScript::7778827588642236156::1751191744::0::1::::<>Area2D<><>0<>0<><>::
+npc.gd::GDScript::2258664965993607890::1751190328::0::1::::<>Node2D<><>0<>0<><>::
+player.gd::GDScript::1402155806883283369::1751188977::0::1::::<>CharacterBody2D<><>0<>0<><>::
 player_grid_movement.gd::GDScript/GDScript::8285481891254385612::1744190797::0::1::::<>CharacterBody2D<><>0<>0<><>::
 player_movement.gd::GDScript/GDScript::7629498927403203199::1743151221::0::1::::<>CharacterBody2D<><>0<>0<><>::
